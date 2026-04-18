@@ -414,6 +414,9 @@
         --semantic-bg-primary: var(--primitive-gray-50, #F9FAFB);
         --semantic-bg-secondary: var(--primitive-gray-100, #F3F4F6);
         --semantic-text-primary: var(--primitive-gray-950, #030712);
+        --semantic-text-secondary: var(--primitive-gray-700, #374151);
+        --semantic-text-muted: var(--primitive-gray-500, #6B7280);
+        --semantic-border-light: var(--primitive-gray-200, #E5E7EB);
     }
 }
 
@@ -459,5 +462,361 @@
     
     @page {
         margin: 2cm;
+    }
+}
+
+/* ============================================
+   ENHANCED MOBILE & TABLET RESPONSIVE FIXES
+   Comprehensive fixes for all pages
+   ============================================ */
+
+/* === GLOBAL OVERFLOW FIX === */
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* === TABLET (768px) === */
+@media (max-width: 768px) {
+
+    /* --- Contact Page --- */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-info-card {
+        padding: 1.5rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-system {
+        padding: 1.5rem;
+    }
+
+    .booking-grid,
+    .advanced-calendar {
+        grid-template-columns: 1fr;
+    }
+
+    .calendar-grid {
+        gap: 0.25rem;
+    }
+
+    .calendar-grid button {
+        padding: 0.5rem 0.25rem;
+        font-size: 0.8rem;
+    }
+
+    .time-slots-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-options {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container {
+        height: 250px;
+    }
+
+    .map-container iframe {
+        height: 250px;
+    }
+
+    /* --- Blog Page --- */
+    .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .blog-sidebar {
+        order: -1;
+    }
+
+    .newsletter-container {
+        padding: 2rem 1.5rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+    }
+
+    /* --- About Page --- */
+    .about-grid,
+    .timeline-grid,
+    .values-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        max-height: 350px;
+    }
+
+    /* --- Services Page --- */
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .pricing-card.featured {
+        transform: none;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- Portfolio Dodecagon --- */
+    .dodecagon-container {
+        height: 350px;
+        perspective: 1000px;
+    }
+
+    .dodecagon-spinner {
+        width: 100px;
+        height: 150px;
+    }
+
+    .dodecagon-face {
+        width: 100px;
+        height: 150px;
+        transform: rotateY(var(--ry)) translateZ(200px);
+        border-width: 1px;
+    }
+
+    .dodecagon-face:hover {
+        transform: rotateY(var(--ry)) translateZ(220px) scale(1.1);
+    }
+
+    .filter-bar {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+
+    /* --- CTA Section --- */
+    .cta-content {
+        padding: 2rem 1rem;
+    }
+
+    .cta-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .cta-content p {
+        font-size: 0.95rem;
+    }
+
+    /* --- Instagram Section --- */
+    .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    /* --- Footer --- */
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* === SMALL MOBILE (480px) === */
+@media (max-width: 480px) {
+
+    /* --- Hero --- */
+    .hero-container {
+        padding: 1.5rem 1rem;
+    }
+
+    .hero-title .title-line {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+
+    .hero-title .title-accent {
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.65rem;
+        letter-spacing: 0.08em;
+        padding: 0.5rem 1rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-stats {
+        gap: 1rem;
+    }
+
+    .stat-number {
+        font-size: 1.25rem;
+    }
+
+    .stat-label {
+        font-size: 0.65rem;
+    }
+
+    /* --- Contact --- */
+    .contact-form {
+        padding: 1rem;
+    }
+
+    .booking-system {
+        padding: 1rem;
+    }
+
+    .calendar-header h3 {
+        font-size: 1rem;
+    }
+
+    .time-slots-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- Blog --- */
+    .blog-card-image {
+        height: 180px;
+    }
+
+    .newsletter-container h2 {
+        font-size: 1.5rem;
+    }
+
+    /* --- Dodecagon Gallery --- */
+    .dodecagon-container {
+        height: 280px;
+        perspective: 800px;
+    }
+
+    .dodecagon-spinner {
+        width: 80px;
+        height: 120px;
+    }
+
+    .dodecagon-face {
+        width: 80px;
+        height: 120px;
+        transform: rotateY(var(--ry)) translateZ(160px);
+        border-radius: 8px;
+    }
+
+    .dodecagon-face:hover {
+        transform: rotateY(var(--ry)) translateZ(180px) scale(1.1);
+    }
+
+    /* --- Page Headers --- */
+    .page-header {
+        padding: 80px 1rem 30px;
+    }
+
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .page-header p {
+        font-size: 0.85rem;
+    }
+
+    /* --- Footer --- */
+    .footer-links {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        font-size: 0.75rem;
+    }
+
+    /* --- CTA --- */
+    .cta-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn-large,
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.8rem;
+    }
+
+    /* --- Instagram --- */
+    .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* --- Admin Table --- */
+    .admin-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* === EXTRA SMALL (375px) === */
+@media (max-width: 375px) {
+    .hero-title .title-line {
+        font-size: 1.65rem;
+    }
+
+    .hero-title .title-accent {
+        font-size: 1.4rem;
+    }
+
+    .dodecagon-container {
+        height: 240px;
+    }
+
+    .dodecagon-spinner {
+        width: 65px;
+        height: 98px;
+    }
+
+    .dodecagon-face {
+        width: 65px;
+        height: 98px;
+        transform: rotateY(var(--ry)) translateZ(130px);
+    }
+
+    .dodecagon-face:hover {
+        transform: rotateY(var(--ry)) translateZ(145px) scale(1.1);
     }
 }

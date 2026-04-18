@@ -271,8 +271,12 @@
   width: 100%;
   max-width: 400px;
   height: 100vh;
-  background: rgba(3, 7, 18, 0.98);
+  background: #0A0A0A; /* Premium Obsidian Dark */
+  color: #FFFCF9 !important; /* Force Premium Champagne */
+  color-scheme: dark;
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-left: 1px solid rgba(255, 252, 249, 0.1);
   z-index: var(--primitive-z-fixed, 1030);
   transition: right var(--semantic-duration-300, 300ms)
     var(--semantic-easing-default, ease);
@@ -304,7 +308,7 @@
   font-family: var(--semantic-font-heading, "Playfair Display", serif);
   font-size: var(--semantic-text-3xl, 1.875rem);
   font-weight: var(--primitive-font-weight-semibold, 600);
-  color: var(--semantic-text-primary, #ffffff);
+  color: #FFFCF9; /* Premium Champagne */
   text-decoration: none;
   transition: color var(--semantic-duration-fast, 150ms)
     var(--semantic-easing-default, ease);
@@ -324,7 +328,7 @@
 
 .mobile-menu-info p {
   font-size: var(--semantic-text-sm, 0.875rem);
-  color: var(--semantic-text-muted, #9ca3af);
+  color: rgba(255, 252, 249, 0.7); /* Muted Champagne */
   margin-bottom: var(--primitive-spacing-2, 0.5rem);
 }
 
@@ -341,7 +345,7 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--primitive-radius-full, 9999px);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.1);
   color: var(--semantic-text-primary, #ffffff);
   text-decoration: none;
   transition: all var(--semantic-duration-fast, 150ms)
