@@ -382,142 +382,43 @@
 
 @media (max-width: 768px) {
   .header {
-    padding: 0.5rem 0.75rem;
+    padding: var(--primitive-spacing-3, 0.75rem)
+      var(--primitive-spacing-4, 1rem);
   }
 
   .header.scrolled {
-    padding: 0.35rem 0.75rem;
-  }
-
-  .header-container {
-    gap: 0.5rem;
+    padding: var(--primitive-spacing-2, 0.5rem) var(--primitive-spacing-4, 1rem);
   }
 
   .logo-text {
-    font-size: 0.82rem;
-    letter-spacing: 0.07em;
+    font-size: var(--primitive-font-size-16, 1rem);
   }
 
   .logo-subtitle {
-    font-size: 0.4rem;
-    letter-spacing: 0.18em;
-    margin-top: 1px;
+    font-size: var(--primitive-font-size-8, 0.5rem);
   }
 
   .search-toggle,
   .menu-toggle {
-    width: 32px;
-    height: 32px;
+    width: 44px;
+    height: 44px;
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--semantic-brand-primary);
-  }
-
-  .search-toggle svg,
-  .menu-toggle svg {
-    width: 15px;
-    height: 15px;
-  }
-
-  .menu-toggle span {
-    width: 17px;
+    border: 1.5px solid var(--semantic-brand-primary);
   }
 
   .header-actions {
-    gap: 0.3rem;
-    flex-shrink: 0;
+    gap: var(--primitive-spacing-2, 0.5rem);
   }
 
-  /* === MOBILE SEARCH OVERLAY ===
-     Fixed below header — fully separated from logo & hero text */
-  .search-overlay {
-    /* Use fixed so it anchors to the viewport, not the header */
-    position: fixed;
-    top: 52px;          /* just below header height */
-    left: 0;
-    right: 0;
-    transform: none;
-    height: 44px;
-    width: 100%;
-    padding: 0 1rem;
-    background: rgba(8, 8, 8, 0.97);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.35);
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
-    overflow: visible;
-    z-index: 9998;
-    /* fade animation */
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 280ms ease, visibility 280ms ease;
-  }
-
+  /* Limit search width on tablet so it doesn't reach the logo */
   .search-overlay.active {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .search-container {
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
-
-  .search-container input {
-    flex: 1;
-    height: 100%;
-    padding: 0 2.5rem 0 0.25rem;
-    font-size: 1rem; /* ≥16px prevents iOS auto-zoom */
-    background: transparent;
-    border: none;
-    outline: none;
-    color: var(--semantic-text-primary, #fff);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.35);
-  }
-
-  .search-close {
-    flex-shrink: 0;
+    width: 160px;
   }
 }
 
-/* === iPhone 7 / small phones (≤480px) === */
+/* iPhone 7 and smaller — even shorter search bar */
 @media (max-width: 480px) {
-  .header {
-    padding: 0.4rem 0.55rem;
-  }
-
-  .logo-text {
-    font-size: 0.75rem;
-    letter-spacing: 0.06em;
-  }
-
-  .logo-subtitle {
-    font-size: 0.36rem;
-    letter-spacing: 0.14em;
-  }
-
-  .search-toggle,
-  .menu-toggle {
-    width: 30px;
-    height: 30px;
-  }
-
-  .search-toggle svg,
-  .menu-toggle svg {
-    width: 14px;
-    height: 14px;
-  }
-
-  .menu-toggle span {
-    width: 15px;
-  }
-
-  .header-actions {
-    gap: 0.25rem;
-  }
-
-  .search-overlay {
-    top: 48px;   /* slightly lower header on small phones */
-    height: 40px;
+  .search-overlay.active {
+    width: 130px;
   }
 }
