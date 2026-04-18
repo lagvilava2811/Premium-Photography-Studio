@@ -382,69 +382,142 @@
 
 @media (max-width: 768px) {
   .header {
-    padding: var(--primitive-spacing-3, 0.75rem)
-      var(--primitive-spacing-4, 1rem);
+    padding: 0.5rem 0.75rem;
   }
 
   .header.scrolled {
-    padding: var(--primitive-spacing-2, 0.5rem) var(--primitive-spacing-4, 1rem);
+    padding: 0.35rem 0.75rem;
+  }
+
+  .header-container {
+    gap: 0.5rem;
   }
 
   .logo-text {
-    font-size: var(--primitive-font-size-16, 1rem);
+    font-size: 0.82rem;
+    letter-spacing: 0.07em;
   }
 
   .logo-subtitle {
-    font-size: var(--primitive-font-size-8, 0.5rem);
+    font-size: 0.4rem;
+    letter-spacing: 0.18em;
+    margin-top: 1px;
   }
 
   .search-toggle,
   .menu-toggle {
-    width: 44px; /* Larger tap target for 380px */
-    height: 44px;
+    width: 32px;
+    height: 32px;
     background: rgba(255, 255, 255, 0.05);
-    border: 1.5px solid var(--semantic-brand-primary);
+    border: 1px solid var(--semantic-brand-primary);
+  }
+
+  .search-toggle svg,
+  .menu-toggle svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .menu-toggle span {
+    width: 17px;
   }
 
   .header-actions {
-    gap: var(--primitive-spacing-2, 0.5rem);
+    gap: 0.3rem;
+    flex-shrink: 0;
   }
 
-  /* === MOBILE SEARCH OVERLAY FIX ===
-     On narrow screens (iPhone 7 = 375px) the inline 250px bar
-     pushes over the logo.  Switch to a full-width bar that drops
-     below the header row instead. */
+  /* === MOBILE SEARCH OVERLAY ===
+     Fixed below header — fully separated from logo & hero text */
   .search-overlay {
-    position: absolute;
-    top: 100%; /* sit below the header bar */
+    /* Use fixed so it anchors to the viewport, not the header */
+    position: fixed;
+    top: 52px;          /* just below header height */
     left: 0;
     right: 0;
-    transform: none; /* cancel the desktop translateY(-50%) */
-    height: 48px;
-    width: 100%; /* always full-width on mobile */
-    padding: 0 var(--primitive-spacing-4, 1rem);
-    background: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-top: 1px solid rgba(212, 175, 55, 0.2);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-    overflow: hidden;
-    /* reset desktop animation to height-based fade */
+    transform: none;
+    height: 44px;
+    width: 100%;
+    padding: 0 1rem;
+    background: rgba(8, 8, 8, 0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+    overflow: visible;
+    z-index: 9998;
+    /* fade animation */
     opacity: 0;
     visibility: hidden;
-    transition:
-      opacity 300ms ease,
-      visibility 300ms ease;
+    transition: opacity 280ms ease, visibility 280ms ease;
   }
 
   .search-overlay.active {
-    width: 100%; /* override desktop 250px */
     opacity: 1;
     visibility: visible;
   }
 
+  .search-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
   .search-container input {
-    padding: 0 var(--primitive-spacing-8, 2rem) 0 0;
-    font-size: 1rem; /* prevent iOS auto-zoom (needs ≥16px) */
+    flex: 1;
+    height: 100%;
+    padding: 0 2.5rem 0 0.25rem;
+    font-size: 1rem; /* ≥16px prevents iOS auto-zoom */
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--semantic-text-primary, #fff);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+  }
+
+  .search-close {
+    flex-shrink: 0;
+  }
+}
+
+/* === iPhone 7 / small phones (≤480px) === */
+@media (max-width: 480px) {
+  .header {
+    padding: 0.4rem 0.55rem;
+  }
+
+  .logo-text {
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+  }
+
+  .logo-subtitle {
+    font-size: 0.36rem;
+    letter-spacing: 0.14em;
+  }
+
+  .search-toggle,
+  .menu-toggle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .search-toggle svg,
+  .menu-toggle svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .menu-toggle span {
+    width: 15px;
+  }
+
+  .header-actions {
+    gap: 0.25rem;
+  }
+
+  .search-overlay {
+    top: 48px;   /* slightly lower header on small phones */
+    height: 40px;
   }
 }
