@@ -399,4 +399,40 @@
   .header-actions {
     gap: var(--primitive-spacing-2, 0.5rem);
   }
+
+  /* === MOBILE SEARCH OVERLAY FIX ===
+     On narrow screens (iPhone 7 = 375px) the inline 250px bar
+     pushes over the logo.  Switch to a full-width bar that drops
+     below the header row instead. */
+  .search-overlay {
+    position: absolute;
+    top: 100%;           /* sit below the header bar */
+    left: 0;
+    right: 0;
+    transform: none;     /* cancel the desktop translateY(-50%) */
+    height: 48px;
+    width: 100%;         /* always full-width on mobile */
+    padding: 0 var(--primitive-spacing-4, 1rem);
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    overflow: hidden;
+    /* reset desktop animation to height-based fade */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 300ms ease, visibility 300ms ease;
+  }
+
+  .search-overlay.active {
+    width: 100%;         /* override desktop 250px */
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .search-container input {
+    padding: 0 var(--primitive-spacing-8, 2rem) 0 0;
+    font-size: 1rem;     /* prevent iOS auto-zoom (needs ≥16px) */
+  }
 }
