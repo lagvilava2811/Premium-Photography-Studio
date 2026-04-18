@@ -1,0 +1,347 @@
+/* ============================================
+   CARDS
+   Glass morphism cards with hover effects
+   NO !important - Professional Grade
+   ============================================ */
+
+/* Base Card */
+.card {
+    background: var(--semantic-bg-surface, #1F2937);
+    border-radius: var(--primitive-radius-xl, 0.75rem);
+    overflow: hidden;
+    transition: all var(--semantic-duration-300, 300ms) var(--semantic-easing-emphasized);
+}
+
+/* Glass Card */
+.card-glass {
+    background: var(--semantic-glass-bg);
+    backdrop-filter: var(--semantic-glass-blur);
+    -webkit-backdrop-filter: var(--semantic-glass-blur);
+    border: 1px solid var(--semantic-glass-border);
+    box-shadow: var(--semantic-glass-shadow);
+}
+
+.card-glass:hover {
+    background: rgba(31, 41, 55, 0.8);
+    border-color: var(--semantic-brand-primary, #D4AF37);
+    transform: translateY(-4px);
+}
+
+/* Elevated Card */
+.card-elevated {
+    background: var(--semantic-bg-surface, #1F2937);
+    box-shadow: var(--semantic-shadow-md, 0 4px 6px -1px rgba(0,0,0,0.1));
+}
+
+.card-elevated:hover {
+    box-shadow: var(--semantic-shadow-xl, 0 20px 25px -5px rgba(0,0,0,0.1));
+    transform: translateY(-2px);
+}
+
+/* Card Header */
+.card-header {
+    padding: var(--primitive-spacing-6, 1.5rem) var(--primitive-spacing-6, 1.5rem) 0;
+}
+
+.card-title {
+    font-family: var(--semantic-font-heading, 'Playfair Display', serif);
+    font-size: var(--semantic-text-xl, 1.25rem);
+    font-weight: var(--primitive-font-weight-semibold, 600);
+    color: var(--semantic-text-primary, #FFFFFF);
+    margin-bottom: var(--primitive-spacing-2, 0.5rem);
+}
+
+.card-subtitle {
+    font-size: var(--semantic-text-sm, 0.875rem);
+    color: var(--semantic-text-muted, #9CA3AF);
+}
+
+/* Card Content */
+.card-content {
+    padding: var(--primitive-spacing-6, 1.5rem);
+}
+
+.card-content p {
+    color: var(--semantic-text-secondary, #D1D5DB);
+    line-height: var(--semantic-leading-relaxed, 1.625);
+}
+
+/* Card Footer */
+.card-footer {
+    padding: var(--primitive-spacing-4, 1rem) var(--primitive-spacing-6, 1.5rem) var(--primitive-spacing-6, 1.5rem);
+    border-top: 1px solid var(--semantic-border-light, rgba(255,255,255,0.05));
+    display: flex;
+    align-items: center;
+    gap: var(--primitive-spacing-4, 1rem);
+}
+
+/* Card Image */
+.card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    transition: transform var(--semantic-duration-500, 500ms) var(--semantic-easing-default, ease);
+}
+
+.card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.card-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Service Card (For Photography Services) */
+.service-card {
+    background: var(--semantic-glass-bg);
+    backdrop-filter: var(--semantic-glass-blur);
+    border-radius: var(--primitive-radius-2xl, 1rem);
+    padding: var(--primitive-spacing-8, 2rem);
+    text-align: center;
+    transition: all var(--semantic-duration-500, 500ms) var(--semantic-easing-emphasized);
+    border: 1px solid var(--semantic-glass-border);
+    box-shadow: var(--semantic-glass-shadow);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--semantic-brand-primary, #D4AF37);
+    box-shadow: var(--semantic-shadow-brand, 0 0 30px rgba(212, 175, 55, 0.1));
+}
+
+.service-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto var(--primitive-spacing-6, 1.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));
+    border-radius: var(--primitive-radius-full, 9999px);
+    color: var(--semantic-brand-primary, #D4AF37);
+}
+
+.service-card h3 {
+    font-family: var(--semantic-font-heading, 'Playfair Display', serif);
+    font-size: var(--semantic-text-xl, 1.25rem);
+    font-weight: var(--primitive-font-weight-semibold, 600);
+    color: var(--semantic-text-primary, #FFFFFF);
+    margin-bottom: var(--primitive-spacing-3, 0.75rem);
+}
+
+.service-card p {
+    font-size: var(--semantic-text-sm, 0.875rem);
+    color: var(--semantic-text-secondary, #D1D5DB);
+    line-height: var(--semantic-leading-relaxed, 1.625);
+    margin-bottom: var(--primitive-spacing-6, 1.5rem);
+}
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--primitive-spacing-2, 0.5rem);
+    font-size: var(--semantic-text-sm, 0.875rem);
+    font-weight: var(--primitive-font-weight-medium, 500);
+    color: var(--semantic-brand-primary, #D4AF37);
+    transition: gap var(--semantic-duration-fast, 150ms) var(--semantic-easing-default, ease);
+}
+
+.service-link:hover {
+    gap: var(--primitive-spacing-3, 0.75rem);
+}
+
+.portfolio-card {
+    position: relative;
+    border-radius: var(--primitive-radius-xl, 0.75rem);
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: var(--semantic-shadow-md);
+    transition: all var(--semantic-duration-500, 500ms) var(--semantic-easing-emphasized);
+}
+
+.portfolio-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 2px solid transparent;
+    border-radius: var(--primitive-radius-xl, 0.75rem);
+    transition: border-color var(--semantic-duration-500, 500ms) var(--semantic-easing-emphasized);
+    pointer-events: none;
+    z-index: 10;
+}
+
+.portfolio-card:hover {
+    box-shadow: var(--semantic-shadow-xl);
+    transform: translateY(-4px);
+}
+
+.portfolio-card:hover::after {
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+.portfolio-card-image {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    transition: transform var(--semantic-duration-700, 700ms) var(--semantic-easing-emphasized);
+}
+
+.portfolio-card:hover .portfolio-card-image {
+    transform: scale(1.08);
+}
+
+.portfolio-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--primitive-spacing-6, 1.5rem);
+    background: linear-gradient(to top, rgba(17, 24, 39, 0.95), rgba(17, 24, 39, 0.4) 70%, transparent);
+    backdrop-filter: var(--semantic-glass-blur);
+    -webkit-backdrop-filter: var(--semantic-glass-blur);
+    transform: translateY(100%);
+    transition: transform var(--semantic-duration-500, 500ms) var(--semantic-easing-emphasized);
+    border-top: 1px solid var(--semantic-glass-border);
+}
+
+.portfolio-card:hover .portfolio-card-overlay {
+    transform: translateY(0);
+}
+
+.portfolio-card-title {
+    font-size: var(--semantic-text-lg, 1.125rem);
+    font-weight: var(--primitive-font-weight-semibold, 600);
+    color: var(--semantic-text-primary, #FFFFFF);
+    margin-bottom: var(--primitive-spacing-1, 0.25rem);
+}
+
+.portfolio-card-category {
+    font-size: var(--semantic-text-xs, 0.75rem);
+    color: var(--semantic-brand-primary, #D4AF37);
+}
+
+/* Pricing Card */
+.pricing-card {
+    background: var(--semantic-glass-bg);
+    backdrop-filter: var(--semantic-glass-blur);
+    border-radius: var(--primitive-radius-2xl, 1rem);
+    padding: var(--primitive-spacing-8, 2rem);
+    text-align: center;
+    transition: all var(--semantic-duration-500, 500ms) var(--semantic-easing-emphasized);
+    border: 1px solid var(--semantic-glass-border);
+    box-shadow: var(--semantic-glass-shadow);
+}
+
+.pricing-card.featured {
+    border-color: var(--semantic-brand-primary, #D4AF37);
+    transform: scale(1.02);
+    box-shadow: var(--semantic-shadow-brand, 0 0 30px rgba(212, 175, 55, 0.1));
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.03);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: var(--primitive-spacing-1, 0.25rem) var(--primitive-spacing-3, 0.75rem);
+    background: var(--semantic-brand-primary, #D4AF37);
+    color: var(--semantic-text-inverse, #000000);
+    font-size: var(--semantic-text-xs, 0.75rem);
+    font-weight: var(--primitive-font-weight-bold, 700);
+    border-radius: var(--primitive-radius-full, 9999px);
+}
+
+.pricing-name {
+    font-size: var(--semantic-text-lg, 1.125rem);
+    font-weight: var(--primitive-font-weight-semibold, 600);
+    color: var(--semantic-text-primary, #FFFFFF);
+    margin-bottom: var(--primitive-spacing-4, 1rem);
+}
+
+.pricing-price {
+    font-family: var(--semantic-font-heading, 'Playfair Display', serif);
+    font-size: var(--semantic-text-4xl, 2.25rem);
+    font-weight: var(--primitive-font-weight-bold, 700);
+    color: var(--semantic-brand-primary, #D4AF37);
+    margin-bottom: var(--primitive-spacing-6, 1.5rem);
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--primitive-spacing-8, 2rem);
+}
+
+.pricing-features li {
+    padding: var(--primitive-spacing-2, 0.5rem) 0;
+    color: var(--semantic-text-secondary, #D1D5DB);
+    font-size: var(--semantic-text-sm, 0.875rem);
+    border-bottom: 1px solid var(--semantic-border-light, rgba(255,255,255,0.05));
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    background: var(--semantic-bg-surface, #1F2937);
+    border-radius: var(--primitive-radius-xl, 0.75rem);
+    padding: var(--primitive-spacing-8, 2rem);
+    text-align: center;
+}
+
+.testimonial-quote {
+    font-size: var(--semantic-text-base, 1rem);
+    font-style: italic;
+    color: var(--semantic-text-secondary, #D1D5DB);
+    line-height: var(--semantic-leading-relaxed, 1.625);
+    margin-bottom: var(--primitive-spacing-6, 1.5rem);
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--primitive-spacing-4, 1rem);
+}
+
+.testimonial-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--primitive-radius-full, 9999px);
+    object-fit: cover;
+}
+
+.testimonial-name {
+    font-weight: var(--primitive-font-weight-semibold, 600);
+    color: var(--semantic-text-primary, #FFFFFF);
+}
+
+.testimonial-role {
+    font-size: var(--semantic-text-xs, 0.75rem);
+    color: var(--semantic-text-muted, #9CA3AF);
+}
+
+/* Responsive Cards */
+@media (max-width: 768px) {
+    .card-header,
+    .card-content,
+    .card-footer {
+        padding: var(--primitive-spacing-4, 1rem);
+    }
+    
+    .service-card,
+    .pricing-card {
+        padding: var(--primitive-spacing-6, 1.5rem);
+    }
+    
+    .pricing-card.featured {
+        transform: scale(1);
+    }
+    
+    .pricing-card.featured:hover {
+        transform: scale(1.01);
+    }
+}

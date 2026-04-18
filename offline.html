@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - Anuka Abazadze Photography</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #030712, #0F172A);
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .offline-container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 500px;
+        }
+        
+        .offline-icon {
+            font-size: 6rem;
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            color: #9CA3AF;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 2rem;
+            background: #D4AF37;
+            color: #000000;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        
+        .btn:hover {
+            background: #B8960F;
+            transform: translateY(-2px);
+        }
+        
+        .retry-btn {
+            margin-top: 1rem;
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #FFFFFF;
+        }
+        
+        .retry-btn:hover {
+            border-color: #D4AF37;
+            background: rgba(212, 175, 55, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-container">
+        <div class="offline-icon">📡</div>
+        <h1>You're Offline</h1>
+        <p>It seems you've lost your internet connection. Don't worry - once you're back online, you'll be able to access all content.</p>
+        <a href="/" class="btn">← Go to Homepage</a>
+        <button class="btn retry-btn" onclick="location.reload()">⟳ Try Again</button>
+    </div>
+    
+    <script>
+        // Listen for online status
+        window.addEventListener('online', () => {
+            location.reload();
+        });
+    </script>
+</body>
+</html>

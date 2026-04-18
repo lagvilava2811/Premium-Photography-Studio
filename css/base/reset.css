@@ -1,0 +1,324 @@
+/* ============================================
+   MODERN CSS RESET
+   !important FREE | Professional Grade
+   Based on Josh Comeau + Andy Bell + Modern Best Practices
+   ============================================ */
+
+/* Box sizing - apply to all elements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+ol,
+li,
+pre,
+fieldset,
+legend,
+button,
+input,
+textarea,
+select,
+hr {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set core body defaults */
+body {
+    position: relative;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background-color: var(--semantic-bg-primary, #0A0A0A);
+    color: var(--semantic-text-primary, #F9FAFB);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-synthesis: none;
+    overflow-x: hidden;
+}
+
+/* ============================================
+   GLOBAL DYNAMIC BACKGROUND (Pro Max)
+   ============================================ */
+
+/* 1. Dynamic Mesh Gradient Layer */
+body::before {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    z-index: -2;
+    pointer-events: none;
+    background: 
+        radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 60%),
+        radial-gradient(circle at 80% 20%, rgba(30, 25, 20, 0.8) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(20, 20, 20, 0.9) 0%, transparent 50%);
+    background-color: var(--semantic-bg-primary, #0A0A0A);
+    animation: meshMovement 30s ease-in-out infinite alternate;
+}
+
+/* 2. Cinematic Noise/Grain Layer */
+body::after {
+    content: '';
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    z-index: -1;
+    pointer-events: none;
+    background-image: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.04"/%3E%3C/svg%3E');
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    opacity: 0.8;
+    animation: noiseFlicker 8s steps(10) infinite;
+}
+
+/* Remove list styles */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Make images and media easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Inherit fonts for form controls */
+input,
+button,
+textarea,
+select,
+optgroup {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+}
+
+/* Remove default button styles */
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Remove default input styles */
+input,
+textarea,
+select {
+    background: none;
+    border: none;
+}
+
+/* Remove default fieldset styles */
+fieldset {
+    border: none;
+}
+
+/* Remove default legend styles */
+legend {
+    display: table;
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0.5rem;
+}
+
+/* Fix legend display for Firefox */
+legend + * {
+    clear: both;
+}
+
+/* Remove anchor text decoration */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove default table spacing */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Set default table cell alignment */
+th,
+td {
+    text-align: left;
+    vertical-align: top;
+}
+
+/* Remove default quotes */
+q,
+blockquote {
+    quotes: none;
+}
+
+/* Remove default cite styles */
+cite {
+    font-style: normal;
+}
+
+/* Remove default hr styles */
+hr {
+    border: none;
+    background: none;
+}
+
+/* Remove default iframe border */
+iframe {
+    border: none;
+}
+
+/* Remove default details marker */
+details > summary {
+    list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Set default focus styles (without !important) */
+:focus-visible {
+    outline: 2px solid var(--semantic-interactive-focus, #3B82F6);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Remove focus for mouse users */
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Set selection styles */
+::selection {
+    background-color: var(--semantic-brand-primary, #D4AF37);
+    color: var(--semantic-text-inverse, #000000);
+}
+
+/* Set scrollbar styles */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--semantic-bg-secondary, #F3F4F6);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--semantic-brand-primary, #D4AF37);
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--semantic-brand-primary-hover, #B8960F);
+}
+
+/* Firefox scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--semantic-brand-primary, #D4AF37) var(--semantic-bg-secondary, #F3F4F6);
+}
+
+/* Disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms;
+        animation-iteration-count: 1;
+        transition-duration: 0.01ms;
+        scroll-behavior: auto;
+    }
+}
+
+/* Print styles */
+@media print {
+    *,
+    *::before,
+    *::after {
+        background: transparent;
+        color: #000;
+        box-shadow: none;
+        text-shadow: none;
+    }
+    
+    body {
+        min-height: auto;
+    }
+    
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    
+    a[href]::after {
+        content: " (" attr(href) ")";
+    }
+    
+    abbr[title]::after {
+        content: " (" attr(title) ")";
+    }
+    
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    
+    thead {
+        display: table-header-group;
+    }
+    
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+    
+    @page {
+        margin: 2cm;
+    }
+}

@@ -1,0 +1,141 @@
+/* ============================================
+   PAGE TRANSITIONS
+   Smooth page transitions and route animations
+   NO !important - Professional Grade
+   ============================================ */
+
+/* Page Transition Container */
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--semantic-bg-primary, #030712);
+    z-index: var(--primitive-z-toast, 1070);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(100%);
+    transition: transform var(--semantic-duration-500, 500ms) var(--semantic-easing-emphasized, cubic-bezier(0.2, 0, 0, 1));
+}
+
+.page-transition.active {
+    transform: translateY(0);
+}
+
+.page-transition.exit {
+    transform: translateY(-100%);
+}
+
+/* Fade Transition */
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity var(--semantic-duration-300, 300ms) var(--semantic-easing-default, ease);
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity var(--semantic-duration-300, 300ms) var(--semantic-easing-default, ease);
+}
+
+/* Slide Transition */
+.slide-enter {
+    transform: translateX(100%);
+}
+
+.slide-enter-active {
+    transform: translateX(0);
+    transition: transform var(--semantic-duration-300, 300ms) var(--semantic-easing-default, ease);
+}
+
+.slide-exit {
+    transform: translateX(0);
+}
+
+.slide-exit-active {
+    transform: translateX(-100%);
+    transition: transform var(--semantic-duration-300, 300ms) var(--semantic-easing-default, ease);
+}
+
+/* Scale Transition */
+.scale-enter {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.scale-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all var(--semantic-duration-300, 300ms) var(--semantic-easing-default, ease);
+}
+
+.scale-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.scale-exit-active {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all var(--semantic-duration-300, 300ms) var(--semantic-easing-default, ease);
+}
+
+/* Route Transition Wrapper */
+.route-wrapper {
+    position: relative;
+}
+
+.route-wrapper > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Loading Bar for Page Transitions */
+.loading-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--semantic-brand-primary, #D4AF37), var(--semantic-brand-primary-light, #F9D266));
+    z-index: var(--primitive-z-toast, 1070);
+    transform: translateX(-100%);
+    transition: transform var(--semantic-duration-300, 300ms) var(--semantic-easing-default, ease);
+}
+
+.loading-bar.active {
+    transform: translateX(0);
+}
+
+.loading-bar.complete {
+    transform: translateX(100%);
+    transition: transform var(--semantic-duration-500, 500ms) var(--semantic-easing-default, ease);
+}
+
+/* View Transitions API Support */
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: var(--semantic-duration-300, 300ms);
+}
+
+/* Cross-fade for image transitions */
+::view-transition-old(hero-image),
+::view-transition-new(hero-image) {
+    animation-duration: var(--semantic-duration-500, 500ms);
+}

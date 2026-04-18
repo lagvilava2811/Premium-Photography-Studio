@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="ka-GE">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+
+    <title>ანუკა აბაზაძე | ბლოგი - ფოტოგრაფიის რჩევები და ინსპირაცია</title>
+
+    <meta
+      name="description"
+      content="ანუკა აბაზაძის ბლოგი - ფოტოგრაფიის რჩევები, ინსპირაცია, უკანა კულისები და ბოლო პროექტები. გამოიწერეთ სიახლეები."
+    />
+    <meta
+      name="keywords"
+      content="ფოტოგრაფიის ბლოგი, ფოტოგრაფიის რჩევები, ინსპირაცია, Anuka Abazadze blog"
+    />
+    <meta name="author" content="Anuka Abazadze" />
+
+    <link rel="canonical" href="https://anukaabazadze.com/blog.html" />
+
+    <meta property="og:title" content="ანუკა აბაზაძე | ბლოგი" />
+    <meta
+      property="og:description"
+      content="ფოტოგრაფიის რჩევები, ინსპირაცია, უკანა კულისები და ბოლო პროექტები."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/tokens/primitives.css" />
+    <link rel="stylesheet" href="css/tokens/semantic.css" />
+    <link rel="stylesheet" href="css/tokens/components.css" />
+    <link rel="stylesheet" href="css/base/reset.css" />
+    <link rel="stylesheet" href="css/base/typography.css" />
+    <link rel="stylesheet" href="css/base/utilities.css" />
+    <link rel="stylesheet" href="css/layouts/header.css" />
+    <link rel="stylesheet" href="css/layouts/footer.css" />
+    <link rel="stylesheet" href="css/layouts/grid.css" />
+    <link rel="stylesheet" href="css/components/buttons.css" />
+    <link rel="stylesheet" href="css/components/cards.css" />
+    <link rel="stylesheet" href="css/components/modals.css" />
+    <link rel="stylesheet" href="css/components/navigation.css" />
+    <link rel="stylesheet" href="css/components/carousel.css" />
+    <link rel="stylesheet" href="css/animations/keyframes.css" />
+    <link rel="stylesheet" href="css/animations/transitions.css" />
+    <link rel="stylesheet" href="css/animations/scroll-effects.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <style>
+      .page-header {
+        padding: 160px var(--primitive-spacing-6, 1.5rem) 80px;
+        text-align: center;
+        background: transparent;
+        position: relative;
+      }
+
+      .page-header h1 {
+        font-size: var(--semantic-text-6xl, 3.815rem);
+        margin-bottom: var(--primitive-spacing-4, 1rem);
+        background: linear-gradient(
+          135deg,
+          var(--primitive-gold-100),
+          var(--primitive-gold-400)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: var(--semantic-font-heading);
+        letter-spacing: -0.02em;
+      }
+
+      .page-header p {
+        background: linear-gradient(
+          135deg,
+          var(--primitive-champagne-100),
+          var(--primitive-gold-300)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: var(--semantic-text-xl, 1.25rem);
+        font-weight: 300;
+        letter-spacing: 0.05em;
+      }
+
+      .blog-section {
+        padding: var(--primitive-spacing-12, 3rem) 0
+          var(--primitive-spacing-16, 4rem);
+      }
+
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--primitive-spacing-8, 2rem);
+      }
+
+      .blog-card {
+        background: var(--semantic-glass-bg);
+        backdrop-filter: var(--semantic-glass-blur);
+        -webkit-backdrop-filter: var(--semantic-glass-blur);
+        border-radius: var(--primitive-radius-2xl, 1rem);
+        overflow: hidden;
+        transition: all var(--semantic-duration-300, 300ms)
+          var(--semantic-easing-emphasized);
+        border: 1px solid var(--semantic-glass-border);
+        box-shadow: var(--semantic-glass-shadow);
+      }
+
+      .blog-card:hover {
+        transform: translateY(-8px);
+        border-color: rgba(212, 175, 55, 0.5);
+        box-shadow:
+          0 12px 40px rgba(212, 175, 55, 0.1),
+          var(--semantic-glass-shadow);
+      }
+
+      .blog-image {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        transition: transform var(--semantic-duration-500, 500ms) ease;
+      }
+
+      .blog-card:hover .blog-image {
+        transform: scale(1.05);
+      }
+
+      .blog-image-wrapper {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .blog-category {
+        position: absolute;
+        top: var(--primitive-spacing-4, 1rem);
+        left: var(--primitive-spacing-4, 1rem);
+        padding: var(--primitive-spacing-1, 0.25rem)
+          var(--primitive-spacing-3, 0.75rem);
+        background: var(--semantic-brand-primary, #d4af37);
+        color: var(--semantic-text-inverse, #000000);
+        font-size: var(--semantic-text-xs, 0.75rem);
+        font-weight: var(--primitive-font-weight-semibold, 600);
+        border-radius: var(--primitive-radius-full, 9999px);
+      }
+
+      .blog-content {
+        padding: var(--primitive-spacing-6, 1.5rem);
+      }
+
+      .blog-meta {
+        display: flex;
+        gap: var(--primitive-spacing-4, 1rem);
+        margin-bottom: var(--primitive-spacing-3, 0.75rem);
+        font-size: var(--semantic-text-xs, 0.75rem);
+        color: var(--primitive-champagne-300);
+      }
+
+      .blog-title {
+        font-family: var(--semantic-font-heading, "Playfair Display", serif);
+        font-size: var(--semantic-text-xl, 1.25rem);
+        font-weight: var(--primitive-font-weight-semibold, 600);
+        background: linear-gradient(
+          135deg,
+          var(--primitive-gold-100),
+          var(--primitive-gold-400)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: var(--primitive-spacing-3, 0.75rem);
+        line-height: var(--semantic-leading-snug, 1.375);
+      }
+
+      .blog-excerpt {
+        color: var(--primitive-champagne-200);
+        font-size: var(--semantic-text-sm, 0.875rem);
+        line-height: var(--semantic-leading-relaxed, 1.625);
+        margin-bottom: var(--primitive-spacing-4, 1rem);
+      }
+
+      .blog-read-more {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--primitive-spacing-2, 0.5rem);
+        font-size: var(--semantic-text-sm, 0.875rem);
+        font-weight: var(--primitive-font-weight-medium, 500);
+        color: var(--semantic-brand-primary, #d4af37);
+        transition: gap var(--semantic-duration-fast, 150ms) ease;
+      }
+
+      .blog-read-more:hover {
+        gap: var(--primitive-spacing-3, 0.75rem);
+      }
+
+      .newsletter-section {
+        background: rgba(10, 10, 10, 0.4);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid var(--semantic-glass-border);
+        border-bottom: 1px solid var(--semantic-glass-border);
+        padding: var(--primitive-spacing-16, 4rem) 0;
+        text-align: center;
+        position: relative;
+        z-index: 5;
+      }
+
+      .newsletter-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 var(--primitive-spacing-6, 1.5rem);
+      }
+
+      .newsletter-container h2 {
+        font-size: var(--semantic-text-4xl, 2.441rem);
+        margin-bottom: var(--primitive-spacing-4, 1rem);
+        color: var(--semantic-brand-primary, #d4af37);
+      }
+
+      .newsletter-container p {
+        background: linear-gradient(
+          135deg,
+          var(--primitive-champagne-100),
+          var(--primitive-gold-300)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: var(--semantic-text-lg, 1.125rem);
+        margin-bottom: var(--primitive-spacing-8, 2rem);
+        display: inline-block;
+      }
+
+      .newsletter-form {
+        display: flex;
+        gap: var(--primitive-spacing-4, 1rem);
+        margin-top: var(--primitive-spacing-6, 1.5rem);
+      }
+
+      .newsletter-form input {
+        flex: 1;
+        padding: var(--primitive-spacing-4, 1rem);
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: var(--primitive-radius-lg, 0.5rem);
+        color: var(--primitive-champagne-50);
+        transition: all var(--semantic-duration-base, 200ms) ease;
+      }
+
+      .newsletter-form input:focus {
+        outline: none;
+        border-color: var(--semantic-brand-primary, #d4af37);
+        background: rgba(212, 175, 55, 0.05);
+        box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+      }
+
+      @media (max-width: 968px) {
+        .blog-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .page-header {
+          padding: 100px var(--primitive-spacing-4, 1rem) 40px;
+        }
+
+        .page-header h1 {
+          font-size: var(--semantic-text-3xl, 1.875rem);
+        }
+
+        .blog-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .newsletter-form {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <header class="header" id="header">
+      <div class="header-container">
+        <a href="index.html" class="logo">
+          <span class="logo-text">ANU<span class="logo-accent">KA</span></span>
+          <span class="logo-subtitle">ABAZADZE</span>
+        </a>
+
+        <nav class="nav-main">
+          <a href="index.html" class="nav-link">HOME</a>
+          <a href="about.html" class="nav-link">STORY</a>
+          <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
+          <a href="services.html" class="nav-link">SERVICES</a>
+          <a href="contact.html" class="nav-link">CONTACT</a>
+          <a href="blog.html" class="nav-link active">BLOG</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="search-toggle" aria-label="Search">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+          </button>
+          <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="search-overlay">
+        <div class="search-container">
+          <input type="text" placeholder="Search..." id="searchInput" />
+          <button class="search-close">✕</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-container">
+        <nav class="mobile-nav">
+          <a href="index.html">HOME</a>
+          <a href="about.html">STORY</a>
+          <a href="portfolio.html">PORTFOLIO</a>
+          <a href="services.html">SERVICES</a>
+          <a href="contact.html">CONTACT</a>
+          <a href="blog.html">BLOG</a>
+        </nav>
+        <div class="mobile-menu-info">
+          <p>anuka@abazadze.com</p>
+          <p>+995 599 123 456</p>
+          <p>Kutaisi, Georgia</p>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="page-header">
+        <div
+          class="hero-subtitle"
+          style="
+            display: inline-block;
+            font-size: var(--semantic-text-xs, 0.75rem);
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--primitive-gold-200);
+            font-weight: 500;
+            margin-bottom: var(--primitive-spacing-6, 1.5rem);
+            padding: var(--primitive-spacing-2, 0.5rem)
+              var(--primitive-spacing-4, 1rem);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 9999px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+          "
+        >
+          BLOG
+        </div>
+        <h1>Stories & Insights</h1>
+        <p>Photography tips, behind-the-scenes, and creative inspiration</p>
+      </section>
+
+      <section class="blog-section">
+        <div class="container">
+          <div class="blog-grid" id="blogGrid"></div>
+        </div>
+      </section>
+
+      <section class="newsletter-section">
+        <div class="newsletter-container">
+          <div
+            class="hero-subtitle"
+            style="
+              display: inline-block;
+              font-size: var(--semantic-text-xs, 0.75rem);
+              letter-spacing: 0.25em;
+              text-transform: uppercase;
+              color: var(--primitive-gold-200);
+              font-weight: 500;
+              margin-bottom: var(--primitive-spacing-6, 1.5rem);
+              padding: var(--primitive-spacing-2, 0.5rem)
+                var(--primitive-spacing-4, 1rem);
+              border: 1px solid rgba(212, 175, 55, 0.3);
+              border-radius: 9999px;
+              background: rgba(0, 0, 0, 0.4);
+              backdrop-filter: blur(8px);
+            "
+          >
+            NEWSLETTER
+          </div>
+          <h2>Get Weekly Inspiration</h2>
+          <p>
+            Subscribe to receive photography tips, exclusive content, and studio
+            updates
+          </p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit" class="btn btn-primary">Subscribe →</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="cta-container">
+          <div class="cta-content" style="text-align: center; max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+            <h2
+              style="
+                font-size: 3rem;
+                background: linear-gradient(
+                  135deg,
+                  var(--primitive-gold-100),
+                  var(--primitive-gold-400)
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-bottom: 1.5rem;
+              "
+            >
+              Ready to Create?
+            </h2>
+            <p
+              style="
+                font-size: 1.125rem;
+                background: linear-gradient(
+                  135deg,
+                  var(--primitive-champagne-100),
+                  var(--primitive-gold-300)
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-bottom: 2rem;
+              "
+            >
+              Let's bring your vision to life through the lens.
+            </p>
+            <a href="contact.html" class="btn btn-primary btn-large"
+              >BOOK A SESSION →</a
+            >
+          </div>
+          <div class="cta-bg"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">ANUKA ABAZADZE</a>
+          <p>Premium Photography Studio<br />Based in Kutaisi, Georgia</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <path d="M17.5 6.5v.01" /></svg
+            ></a>
+            <a href="#" aria-label="Facebook"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                /></svg
+            ></a>
+            <a href="#" aria-label="Pinterest"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path
+                  d="M8 22.5c-1-3-1-4 0-7 0 0 1 1 3 1s4-1.5 5-4 0-6-3-7c-3-1-6 0-8 2-1 1-2 2-2 4 0 3 2 5 4 5s2-1 2-2"
+                />
+                <circle cx="12" cy="12" r="10" /></svg
+            ></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html">Blog</a>
+          </div>
+          <div class="footer-col">
+            <h4>Connect</h4>
+            <a href="contact.html">Contact</a>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Pinterest</a>
+          </div>
+          <div class="footer-col">
+            <h4>Studio</h4>
+            <p>Kutaisi, Georgia</p>
+            <p>+995 599 123 456</p>
+            <p>anuka@abazadze.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Anuka Abazadze. All rights reserved.</p>
+        <p>Designed with <span>♥</span> by Vako Lagvilava</p>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="blog.js"></script>
+  </body>
+</html>

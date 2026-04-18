@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="ka-GE">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+
+    <title>ანუკა აბაზაძე | კონტაქტი და დაჯავშნა - Photography Studio</title>
+
+    <meta
+      name="description"
+      content="დაუკავშირდით ანუკა აბაზაძეს - ფოტოგრაფი ქუთაისში. დაჯავშნეთ ფოტოსესია, მიიღეთ კონსულტაცია. მისამართი, ტელეფონი, ელ.ფოსტა."
+    />
+    <meta
+      name="keywords"
+      content="კონტაქტი, დაჯავშნა, ფოტოგრაფი ქუთაისში, ფოტოსესიის დაჯავშნა, Anuka Abazadze contact"
+    />
+
+    <link rel="canonical" href="https://anukaabazadze.com/contact.html" />
+
+    <meta property="og:title" content="ანუკა აბაზაძე | კონტაქტი და დაჯავშნა" />
+    <meta
+      property="og:description"
+      content="დაუკავშირდით ანუკა აბაზაძეს - ფოტოგრაფი ქუთაისში. დაჯავშნეთ ფოტოსესია."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/tokens/primitives.css" />
+    <link rel="stylesheet" href="css/tokens/semantic.css" />
+    <link rel="stylesheet" href="css/tokens/components.css" />
+    <link rel="stylesheet" href="css/base/reset.css" />
+    <link rel="stylesheet" href="css/base/typography.css" />
+    <link rel="stylesheet" href="css/base/utilities.css" />
+    <link rel="stylesheet" href="css/layouts/header.css" />
+    <link rel="stylesheet" href="css/layouts/footer.css" />
+    <link rel="stylesheet" href="css/layouts/grid.css" />
+    <link rel="stylesheet" href="css/components/buttons.css" />
+    <link rel="stylesheet" href="css/components/cards.css" />
+    <link rel="stylesheet" href="css/components/modals.css" />
+    <link rel="stylesheet" href="css/components/navigation.css" />
+    <link rel="stylesheet" href="css/components/carousel.css" />
+    <link rel="stylesheet" href="css/animations/keyframes.css" />
+    <link rel="stylesheet" href="css/animations/transitions.css" />
+    <link rel="stylesheet" href="css/animations/scroll-effects.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <style>
+      .page-header {
+        padding: 160px var(--primitive-spacing-6, 1.5rem) 80px;
+        text-align: center;
+        background: transparent;
+        border-bottom: 1px solid var(--semantic-glass-border);
+        position: relative;
+      }
+      .page-header h1 {
+        font-size: var(--semantic-text-6xl, 3.815rem);
+        margin-bottom: var(--primitive-spacing-4, 1rem);
+        background: linear-gradient(
+          135deg,
+          var(--primitive-gold-100),
+          var(--primitive-gold-400)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: var(--semantic-font-heading);
+        letter-spacing: -0.02em;
+      }
+
+      .page-header p {
+        background: linear-gradient(135deg, var(--primitive-gold-100), var(--primitive-gold-400));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: var(--semantic-text-xl, 1.25rem);
+        font-weight: 300;
+        letter-spacing: 0.05em;
+      }
+
+      .contact-section {
+        padding: var(--primitive-spacing-16, 4rem) 0;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--primitive-spacing-12, 3rem);
+      }
+
+      .contact-info h2,
+      .contact-form-container h2 {
+        font-size: var(--semantic-text-4xl, 2.25rem);
+        margin-bottom: var(--primitive-spacing-4, 1rem);
+        background: linear-gradient(135deg, var(--primitive-gold-100), var(--primitive-gold-400));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .contact-info p,
+      .contact-form-container p {
+        background: linear-gradient(135deg, var(--primitive-gold-100), var(--primitive-gold-400));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: var(--primitive-spacing-8, 2rem);
+        font-size: var(--semantic-text-lg, 1.125rem);
+        line-height: 1.6;
+        font-weight: 400;
+        display: inline-block;
+      }
+
+      .contact-details {
+        margin: var(--primitive-spacing-8, 2rem) 0;
+        background: var(--semantic-glass-bg);
+        backdrop-filter: var(--semantic-glass-blur);
+        -webkit-backdrop-filter: var(--semantic-glass-blur);
+        border: 1px solid var(--semantic-glass-border);
+        border-radius: var(--primitive-radius-xl, 0.75rem);
+        padding: var(--primitive-spacing-8, 2rem);
+        box-shadow: var(--semantic-glass-shadow);
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--primitive-spacing-4, 1rem);
+        margin-bottom: var(--primitive-spacing-6, 1.5rem);
+      }
+
+      .contact-icon {
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+          135deg,
+          rgba(212, 175, 55, 0.2),
+          rgba(212, 175, 55, 0.05)
+        );
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        border-radius: var(--primitive-radius-full, 9999px);
+        color: var(--semantic-brand-primary, #d4af37);
+        flex-shrink: 0;
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+        transition: transform var(--semantic-duration-300, 300ms)
+          var(--semantic-easing-emphasized);
+      }
+      .contact-item:hover .contact-icon {
+        transform: scale(1.1);
+      }
+
+      .contact-text h4 {
+        font-size: var(--semantic-text-base, 1rem);
+        font-weight: var(--primitive-font-weight-semibold, 600);
+        background: linear-gradient(135deg, var(--primitive-gold-100), var(--primitive-gold-400));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: var(--primitive-spacing-1, 0.25rem);
+      }
+
+      .contact-text p,
+      .contact-text a {
+        background: linear-gradient(135deg, var(--primitive-gold-100), var(--primitive-gold-400));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-decoration: none;
+        transition: opacity var(--semantic-duration-fast, 150ms) ease;
+        display: inline-block;
+      }
+
+      .contact-text a:hover {
+        opacity: 0.8;
+      }
+
+      .working-hours {
+        margin-top: var(--primitive-spacing-8, 2rem);
+        padding: var(--primitive-spacing-6, 1.5rem);
+        background: rgba(3, 7, 18, 0.6);
+        border-radius: var(--primitive-radius-xl, 0.75rem);
+        border: 1px solid var(--semantic-glass-border);
+      }
+
+      .working-hours h4 {
+        font-size: var(--semantic-text-lg, 1.125rem);
+        font-weight: var(--primitive-font-weight-semibold, 600);
+        background: linear-gradient(135deg, var(--primitive-gold-100), var(--primitive-gold-400));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: var(--primitive-spacing-4, 1rem);
+      }
+
+      .hours-row {
+        display: flex;
+        justify-content: space-between;
+        padding: var(--primitive-spacing-2, 0.5rem) 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        font-weight: 500;
+        letter-spacing: 0.02em;
+      }
+      .hours-row span {
+        background: linear-gradient(135deg, var(--primitive-gold-100), var(--primitive-gold-400));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hours-row:last-child {
+        border-bottom: none;
+      }
+
+      .map-container {
+        margin-top: var(--primitive-spacing-8, 2rem);
+        border-radius: var(--primitive-radius-2xl, 1rem);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        padding: var(--primitive-spacing-2, 0.5rem);
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+      }
+      
+      .map-wrapper {
+        border-radius: var(--primitive-radius-xl, 0.75rem);
+        overflow: hidden;
+        height: 300px;
+        position: relative;
+      }
+      
+      .map-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(15, 23, 42, 0.4), rgba(212, 175, 55, 0.15));
+        pointer-events: none;
+        z-index: 2;
+        transition: opacity var(--semantic-duration-base, 200ms) ease;
+      }
+
+      .map-wrapper:hover .map-overlay {
+        opacity: 0.5;
+      }
+
+      .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        filter: grayscale(1) invert(0.95) contrast(1.2) brightness(0.85);
+        transition: filter var(--semantic-duration-base, 200ms) ease;
+      }
+      
+      .map-wrapper:hover iframe {
+        filter: grayscale(0.8) invert(0.95) contrast(1.2) brightness(0.95);
+      }
+
+      .contact-form-container .contact-form {
+        background: var(--semantic-glass-bg);
+        backdrop-filter: var(--semantic-glass-blur);
+        -webkit-backdrop-filter: var(--semantic-glass-blur);
+        border-radius: var(--primitive-radius-2xl, 1rem);
+        padding: var(--primitive-spacing-10, 2.5rem);
+        margin-top: var(--primitive-spacing-6, 1.5rem);
+        border: 1px solid var(--semantic-glass-border);
+        box-shadow: var(--semantic-glass-shadow);
+      }
+
+      .form-group {
+        margin-bottom: var(--primitive-spacing-6, 1.5rem);
+      }
+
+      .form-group label {
+        display: inline-block;
+        margin-bottom: var(--primitive-spacing-2, 0.5rem);
+        font-size: var(--semantic-text-sm, 0.875rem);
+        font-weight: var(--primitive-font-weight-semibold, 600);
+        background: linear-gradient(135deg, var(--primitive-gold-100), var(--primitive-gold-400));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: 0.05em;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: var(--primitive-spacing-4, 1rem);
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        border-radius: var(--primitive-radius-lg, 0.5rem);
+        color: var(--semantic-text-primary, #ffffff);
+        font-size: var(--semantic-text-base, 1rem);
+        transition: all var(--semantic-duration-base, 200ms)
+          var(--semantic-easing-emphasized);
+      }
+
+      .form-group select {
+        appearance: none;
+        -webkit-appearance: none;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D4AF37' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 1.2em;
+        cursor: pointer;
+        padding-right: 3rem;
+      }
+
+      .form-group select option {
+        background: #1F2937;
+        color: #D4AF37;
+        font-weight: 500;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: var(--semantic-brand-primary, #d4af37);
+        background: rgba(212, 175, 55, 0.05);
+        box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .booking-system {
+        margin-top: var(--primitive-spacing-8, 2rem);
+      }
+
+      .booking-system h3,
+      .booking-system h4 {
+        font-size: var(--semantic-text-xl, 1.25rem);
+        margin-bottom: var(--primitive-spacing-2, 0.5rem);
+        background: linear-gradient(135deg, var(--primitive-gold-100), var(--primitive-gold-400));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .booking-system > p {
+        background: linear-gradient(135deg, var(--primitive-gold-100), var(--primitive-gold-400));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: var(--primitive-spacing-6, 1.5rem);
+        display: inline-block;
+      }
+
+      .booking-calendar {
+        background: var(--semantic-glass-bg);
+        backdrop-filter: var(--semantic-glass-blur);
+        -webkit-backdrop-filter: var(--semantic-glass-blur);
+        border-radius: var(--primitive-radius-xl, 0.75rem);
+        padding: var(--primitive-spacing-6, 1.5rem);
+        margin-bottom: var(--primitive-spacing-6, 1.5rem);
+        border: 1px solid var(--semantic-glass-border);
+      }
+
+      .calendar-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: var(--primitive-spacing-4, 1rem);
+      }
+
+      .calendar-nav button {
+        background: none;
+        border: none;
+        color: var(--semantic-text-primary, #ffffff);
+        cursor: pointer;
+        font-size: var(--semantic-text-lg, 1.125rem);
+      }
+
+      .calendar-month-year {
+        font-weight: var(--primitive-font-weight-semibold, 600);
+        background: linear-gradient(135deg, var(--primitive-gold-100), var(--primitive-gold-400));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .calendar-weekdays {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        text-align: center;
+        margin-bottom: var(--primitive-spacing-2, 0.5rem);
+        font-size: var(--semantic-text-xs, 0.75rem);
+        background: linear-gradient(135deg, var(--primitive-gold-100), var(--primitive-gold-400));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .calendar-days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: var(--primitive-spacing-1, 0.25rem);
+      }
+
+      .calendar-day {
+        aspect-ratio: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: var(--semantic-text-sm, 0.875rem);
+        border-radius: var(--primitive-radius-lg, 0.5rem);
+        cursor: pointer;
+        transition: all var(--semantic-duration-fast, 150ms) ease;
+        color: var(--semantic-text-secondary, #d1d5db);
+      }
+
+      .calendar-day.available {
+        color: #D4AF37;
+      }
+
+      .calendar-day.available:hover,
+      .calendar-day.selected {
+        background: var(--semantic-brand-primary, #d4af37);
+        color: var(--semantic-text-inverse, #000000);
+      }
+
+      .calendar-day.past,
+      .calendar-day.booked,
+      .calendar-day.weekend {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+
+      .timeslots-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--primitive-spacing-2, 0.5rem);
+        margin-bottom: var(--primitive-spacing-6, 1.5rem);
+      }
+
+      .timeslot {
+        padding: var(--primitive-spacing-2, 0.5rem);
+        background: var(--semantic-bg-secondary, #0f172a);
+        border: 1px solid var(--semantic-border-light, rgba(255, 255, 255, 0.1));
+        border-radius: var(--primitive-radius-lg, 0.5rem);
+        color: #D4AF37;
+        cursor: pointer;
+        transition: all var(--semantic-duration-fast, 150ms) ease;
+      }
+
+      .timeslot:hover,
+      .timeslot.selected {
+        background: var(--semantic-brand-primary, #d4af37);
+        color: var(--semantic-text-inverse, #000000);
+        border-color: var(--semantic-brand-primary, #d4af37);
+      }
+
+      .timeslot.booked {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+
+      .services-grid {
+        display: grid;
+        gap: var(--primitive-spacing-3, 0.75rem);
+        margin-bottom: var(--primitive-spacing-6, 1.5rem);
+      }
+
+      .booking-services .service-card {
+        padding: var(--primitive-spacing-3, 0.75rem);
+        cursor: pointer;
+      }
+
+      .booking-services .service-card.selected {
+        border-color: var(--semantic-brand-primary, #d4af37);
+        background: rgba(212, 175, 55, 0.1);
+      }
+
+      .booking-summary {
+        background: var(--semantic-glass-bg);
+        backdrop-filter: var(--semantic-glass-blur);
+        -webkit-backdrop-filter: var(--semantic-glass-blur);
+        border-radius: var(--primitive-radius-xl, 0.75rem);
+        padding: var(--primitive-spacing-6, 1.5rem);
+        margin: var(--primitive-spacing-6, 1.5rem) 0;
+        border: 1px solid var(--semantic-glass-border);
+      }
+
+      .booking-summary h4 {
+        margin-bottom: var(--primitive-spacing-3, 0.75rem);
+        background: linear-gradient(135deg, var(--primitive-gold-100), var(--primitive-gold-400));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .summary-row {
+        display: flex;
+        justify-content: space-between;
+        padding: var(--primitive-spacing-2, 0.5rem) 0;
+        background: linear-gradient(135deg, var(--primitive-gold-100), var(--primitive-gold-400));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .summary-row.total {
+        border-top: 1px solid
+          var(--semantic-border-light, rgba(255, 255, 255, 0.1));
+        margin-top: var(--primitive-spacing-2, 0.5rem);
+        padding-top: var(--primitive-spacing-2, 0.5rem);
+        font-weight: var(--primitive-font-weight-bold, 700);
+        color: var(--semantic-brand-primary, #d4af37);
+      }
+
+      .btn-full {
+        width: 100%;
+      }
+
+      .no-selection {
+        text-align: center;
+        padding: var(--primitive-spacing-8, 2rem);
+        color: var(--semantic-text-muted, #9ca3af);
+      }
+
+      @media (max-width: 968px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .timeslots-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .page-header {
+          padding: 100px var(--primitive-spacing-4, 1rem) 40px;
+        }
+
+        .page-header h1 {
+          font-size: var(--semantic-text-3xl, 1.875rem);
+        }
+
+        .timeslots-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .contact-form-container .contact-form {
+          padding: var(--primitive-spacing-6, 1.5rem);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .timeslots-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <header class="header" id="header">
+      <div class="header-container">
+        <a href="index.html" class="logo">
+          <span class="logo-text">ANU<span class="logo-accent">KA</span></span>
+          <span class="logo-subtitle">ABAZADZE</span>
+        </a>
+
+        <nav class="nav-main">
+          <a href="index.html" class="nav-link">HOME</a>
+          <a href="about.html" class="nav-link">STORY</a>
+          <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
+          <a href="services.html" class="nav-link">SERVICES</a>
+          <a href="contact.html" class="nav-link active">CONTACT</a>
+          <a href="blog.html" class="nav-link">BLOG</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="search-toggle" aria-label="Search">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+          </button>
+          <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="search-overlay">
+        <div class="search-container">
+          <input type="text" placeholder="Search..." id="searchInput" />
+          <button class="search-close">✕</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-container">
+        <nav class="mobile-nav">
+          <a href="index.html">HOME</a>
+          <a href="about.html">STORY</a>
+          <a href="portfolio.html">PORTFOLIO</a>
+          <a href="services.html">SERVICES</a>
+          <a href="contact.html">CONTACT</a>
+          <a href="blog.html">BLOG</a>
+        </nav>
+        <div class="mobile-menu-info">
+          <p>anuka@abazadze.com</p>
+          <p>+995 599 123 456</p>
+          <p>Kutaisi, Georgia</p>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="page-header">
+        <div
+          class="hero-subtitle"
+          style="
+            display: inline-block;
+            font-size: var(--semantic-text-xs, 0.75rem);
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--primitive-gold-200);
+            font-weight: 500;
+            margin-bottom: var(--primitive-spacing-6, 1.5rem);
+            padding: var(--primitive-spacing-2, 0.5rem)
+              var(--primitive-spacing-4, 1rem);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 9999px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+          "
+        >
+          GET IN TOUCH
+        </div>
+        <h1>Let's Connect</h1>
+        <p>
+          I'd love to hear about your vision and discuss how we can bring it to
+          life
+        </p>
+      </section>
+
+      <section class="contact-section">
+        <div class="container">
+          <div class="contact-grid">
+            <!-- Contact Info -->
+            <div class="contact-info">
+              <h2>Studio Information</h2>
+              <p>
+                Located in the heart of Kutaisi, Georgia, my studio is designed
+                to be a welcoming space where creativity flows freely.
+              </p>
+
+              <div class="contact-details">
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <path
+                        d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                      />
+                      <circle cx="12" cy="12" r="3" />
+                    </svg>
+                  </div>
+                  <div class="contact-text">
+                    <h4>Studio Address</h4>
+                    <p>
+                      Anuka Abazadze Photography Studio<br />Kutaisi, Georgia
+                      4600
+                    </p>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="contact-text">
+                    <h4>Phone & WhatsApp</h4>
+                    <a href="tel:+995599123456">+995 599 123 456</a>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <path
+                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                      />
+                      <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                  </div>
+                  <div class="contact-text">
+                    <h4>Email</h4>
+                    <a href="mailto:anuka@abazadze.com">anuka@abazadze.com</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="working-hours">
+                <h4>Working Hours</h4>
+                <div class="hours-row">
+                  <span>Monday - Friday</span><span>10:00 - 18:00</span>
+                </div>
+                <div class="hours-row">
+                  <span>Saturday</span><span>11:00 - 16:00</span>
+                </div>
+                <div class="hours-row">
+                  <span>Sunday</span><span>Closed</span>
+                </div>
+              </div>
+
+              <div class="map-container">
+                <div class="map-wrapper">
+                  <div class="map-overlay"></div>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980.234567890123!2d42.724999!3d42.266667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4041e8a8b8b8b8b8%3A0x0!2zNDLCsDE2JzAwLjAiTiA0MsKwNDMnMzAuMCJF!5e0!3m2!1sen!2sge!4v1234567890123!5m2!1sen!2sge"
+                    allowfullscreen=""
+                    loading="lazy"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-container">
+              <h2>Send a Message</h2>
+              <p>
+                Fill out the form below and I'll get back to you within 24
+                hours.
+              </p>
+
+              <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                  <label for="name">Full Name *</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" />
+                </div>
+                <div class="form-group">
+                  <label for="service">Service Interested In *</label>
+                  <select id="service" name="service" required>
+                    <option value="">Select a service</option>
+                    <option value="portrait">Fine Art Portrait</option>
+                    <option value="wedding">Wedding Photography</option>
+                    <option value="commercial">Commercial / Branding</option>
+                    <option value="event">Event Coverage</option>
+                    <option value="other">Other / General Inquiry</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message *</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                  Send Message →
+                </button>
+              </form>
+
+              <div id="bookingSystem"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="cta-container">
+          <div class="cta-content" style="text-align: center; max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+            <h2
+              style="
+                font-size: 3rem;
+                background: linear-gradient(
+                  135deg,
+                  var(--primitive-gold-100),
+                  var(--primitive-gold-400)
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-bottom: 1.5rem;
+              "
+            >
+              Follow the Journey
+            </h2>
+            <p
+              style="
+                font-size: 1.125rem;
+                background: linear-gradient(
+                  135deg,
+                  var(--primitive-champagne-100),
+                  var(--primitive-gold-300)
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-bottom: 2rem;
+              "
+            >
+              Stay connected on Instagram for daily inspiration and recent work
+            </p>
+            <a href="#" class="btn btn-primary btn-large"
+              >Follow on Instagram →</a
+            >
+          </div>
+          <div class="cta-bg"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">ANUKA ABAZADZE</a>
+          <p>Premium Photography Studio<br />Based in Kutaisi, Georgia</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <path d="M17.5 6.5v.01" /></svg
+            ></a>
+            <a href="#" aria-label="Facebook"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                /></svg
+            ></a>
+            <a href="#" aria-label="Pinterest"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path
+                  d="M8 22.5c-1-3-1-4 0-7 0 0 1 1 3 1s4-1.5 5-4 0-6-3-7c-3-1-6 0-8 2-1 1-2 2-2 4 0 3 2 5 4 5s2-1 2-2"
+                />
+                <circle cx="12" cy="12" r="10" /></svg
+            ></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="services.html">Services</a>
+          </div>
+          <div class="footer-col">
+            <h4>Connect</h4>
+            <a href="contact.html">Contact</a>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Pinterest</a>
+          </div>
+          <div class="footer-col">
+            <h4>Studio</h4>
+            <p>Kutaisi, Georgia</p>
+            <p>+995 599 123 456</p>
+            <p>anuka@abazadze.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Anuka Abazadze. All rights reserved.</p>
+        <p>Designed with <span>♥</span> by Vako Lagvilava</p>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/booking.js"></script>
+
+    <script>
+      // Contact form submission
+      const contactForm = document.getElementById("contactForm");
+      if (contactForm) {
+        contactForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const phone = document.getElementById("phone").value;
+          const service = document.getElementById("service").value;
+          const message = document.getElementById("message").value;
+
+          if (!name || !email || !service || !message) {
+            alert("Please fill in all required fields");
+            return;
+          }
+
+          // Here you would typically send to your backend
+          console.log("Form submitted:", {
+            name,
+            email,
+            phone,
+            service,
+            message,
+          });
+
+          alert(
+            `Thank you ${name}! Your message has been sent. I will respond within 24 hours.`,
+          );
+          contactForm.reset();
+        });
+      }
+    </script>
+  </body>
+</html>

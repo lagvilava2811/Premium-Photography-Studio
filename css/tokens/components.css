@@ -1,0 +1,22 @@
+/* ============================================
+   COMPONENTS TOKENS
+   Component-specific design tokens
+   ============================================ */
+
+:root {
+    /* Button Tokens */
+    --button-primary-bg: var(--semantic-brand-primary, #D4AF37);
+    --button-primary-hover: var(--semantic-brand-primary-hover, #B8960F);
+    --button-secondary-bg: transparent;
+    --button-secondary-border: var(--semantic-border-heavy, rgba(255,255,255,0.3));
+    
+    /* Card Tokens */
+    --card-bg: var(--semantic-bg-surface, #1F2937);
+    --card-border: var(--semantic-border-light, rgba(255,255,255,0.05));
+    --card-radius: var(--primitive-radius-xl, 0.75rem);
+    
+    /* Form Tokens */
+    --input-bg: var(--semantic-bg-secondary, #0F172A);
+    --input-border: var(--semantic-border-light, rgba(255,255,255,0.1));
+    --input-focus-border: var(--semantic-brand-primary, #D4AF37);
+}

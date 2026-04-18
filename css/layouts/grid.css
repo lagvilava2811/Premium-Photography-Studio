@@ -1,0 +1,118 @@
+/* ============================================
+   GRID SYSTEM
+   Responsive grid with 12 columns
+   NO !important - Professional Grade
+   ============================================ */
+
+.container {
+    width: 100%;
+    max-width: var(--semantic-layout-container, 1280px);
+    margin: 0 auto;
+    padding: 0 var(--semantic-layout-gutter, 1rem);
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 0 var(--semantic-layout-gutter, 1rem);
+}
+
+/* Grid Base */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(-1 * var(--semantic-layout-gutter, 1rem));
+}
+
+.col {
+    flex: 1 0 0%;
+    padding: 0 var(--semantic-layout-gutter, 1rem);
+}
+
+/* Grid System with display: grid */
+.grid {
+    display: grid;
+    gap: var(--primitive-spacing-6, 1.5rem);
+}
+
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.grid-cols-7 { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+.grid-cols-8 { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+.grid-cols-9 { grid-template-columns: repeat(9, minmax(0, 1fr)); }
+.grid-cols-10 { grid-template-columns: repeat(10, minmax(0, 1fr)); }
+.grid-cols-11 { grid-template-columns: repeat(11, minmax(0, 1fr)); }
+.grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+
+/* Column Spans */
+.col-span-1 { grid-column: span 1 / span 1; }
+.col-span-2 { grid-column: span 2 / span 2; }
+.col-span-3 { grid-column: span 3 / span 3; }
+.col-span-4 { grid-column: span 4 / span 4; }
+.col-span-5 { grid-column: span 5 / span 5; }
+.col-span-6 { grid-column: span 6 / span 6; }
+.col-span-7 { grid-column: span 7 / span 7; }
+.col-span-8 { grid-column: span 8 / span 8; }
+.col-span-9 { grid-column: span 9 / span 9; }
+.col-span-10 { grid-column: span 10 / span 10; }
+.col-span-11 { grid-column: span 11 / span 11; }
+.col-span-12 { grid-column: span 12 / span 12; }
+
+/* Gap Utilities */
+.gap-0 { gap: 0; }
+.gap-1 { gap: var(--primitive-spacing-1, 0.25rem); }
+.gap-2 { gap: var(--primitive-spacing-2, 0.5rem); }
+.gap-3 { gap: var(--primitive-spacing-3, 0.75rem); }
+.gap-4 { gap: var(--primitive-spacing-4, 1rem); }
+.gap-5 { gap: var(--primitive-spacing-5, 1.25rem); }
+.gap-6 { gap: var(--primitive-spacing-6, 1.5rem); }
+.gap-8 { gap: var(--primitive-spacing-8, 2rem); }
+
+/* Responsive Grid */
+@media (min-width: 640px) {
+    .sm\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .sm\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (min-width: 768px) {
+    .md\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .md\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+    .lg\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .lg\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .lg\:grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1280px) {
+    .xl\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .xl\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .xl\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .xl\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .xl\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+}
+
+/* Auto-fit grid for responsive galleries */
+.grid-auto-fit {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--primitive-spacing-6, 1.5rem);
+}
+
+.grid-auto-fill {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--primitive-spacing-6, 1.5rem);
+}

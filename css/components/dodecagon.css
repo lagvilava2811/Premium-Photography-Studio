@@ -1,0 +1,101 @@
+/* ============================================
+   12-SIDED 3D CAROUSEL (DODECAGON)
+   ============================================ */
+
+.dodecagon-container {
+    perspective: 1500px;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 2rem 0;
+}
+
+.dodecagon-spinner {
+    position: relative;
+    width: 240px;
+    height: 360px;
+    transform-style: preserve-3d;
+    animation: spinDodecagon 30s infinite linear;
+}
+
+.dodecagon-spinner:hover {
+    animation-play-state: paused;
+}
+
+.dodecagon-face {
+    position: absolute;
+    width: 240px;
+    height: 360px;
+    left: 0;
+    top: 0;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    border: 2px solid var(--semantic-brand-primary, #D4AF37);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    cursor: pointer;
+    transform: rotateY(var(--ry)) translateZ(460px);
+    background: #111;
+}
+
+.dodecagon-face img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0.8;
+    transition: opacity 0.4s ease;
+}
+
+.dodecagon-face:hover {
+    transform: rotateY(var(--ry)) translateZ(520px) scale(1.15);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
+    z-index: 10;
+}
+
+.dodecagon-face:hover img {
+    opacity: 1;
+}
+
+@keyframes spinDodecagon {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+@media (max-width: 1024px) {
+    .dodecagon-container {
+        height: 500px;
+    }
+    .dodecagon-spinner {
+        width: 180px;
+        height: 270px;
+    }
+    .dodecagon-face {
+        width: 180px;
+        height: 270px;
+        transform: rotateY(var(--ry)) translateZ(350px);
+    }
+    .dodecagon-face:hover {
+        transform: rotateY(var(--ry)) translateZ(390px) scale(1.15);
+    }
+}
+
+@media (max-width: 768px) {
+    .dodecagon-container {
+        height: 400px;
+    }
+    .dodecagon-spinner {
+        width: 130px;
+        height: 195px;
+    }
+    .dodecagon-face {
+        width: 130px;
+        height: 195px;
+        transform: rotateY(var(--ry)) translateZ(260px);
+    }
+    .dodecagon-face:hover {
+        transform: rotateY(var(--ry)) translateZ(290px) scale(1.15);
+    }
+}

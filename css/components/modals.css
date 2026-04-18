@@ -1,0 +1,176 @@
+/* ============================================
+   MODALS
+   Dialog, Modal, Popup components
+   NO !important - Professional Grade
+   ============================================ */
+
+/* Modal Backdrop */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(3, 7, 18, 0.95);
+    backdrop-filter: blur(12px);
+    z-index: var(--primitive-z-modal, 1040);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--semantic-duration-300, 300ms) var(--semantic-easing-default, ease);
+}
+
+.modal-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modal Container */
+.modal-container {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    width: 100%;
+    background: var(--semantic-bg-surface, #1F2937);
+    border-radius: var(--primitive-radius-2xl, 1rem);
+    border: 1px solid var(--semantic-border-light, rgba(255,255,255,0.1));
+    overflow: hidden;
+    transform: scale(0.95);
+    transition: transform var(--semantic-duration-300, 300ms) var(--semantic-easing-default, ease);
+}
+
+.modal-backdrop.active .modal-container {
+    transform: scale(1);
+}
+
+/* Modal Sizes */
+.modal-sm { max-width: 400px; }
+.modal-md { max-width: 600px; }
+.modal-lg { max-width: 800px; }
+.modal-xl { max-width: 1140px; }
+.modal-full { max-width: 95vw; }
+
+/* Modal Header */
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--primitive-spacing-6, 1.5rem) var(--primitive-spacing-6, 1.5rem) 0;
+}
+
+.modal-title {
+    font-family: var(--semantic-font-heading, 'Playfair Display', serif);
+    font-size: var(--semantic-text-xl, 1.25rem);
+    font-weight: var(--primitive-font-weight-semibold, 600);
+    color: var(--semantic-text-primary, #FFFFFF);
+}
+
+.modal-close {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--primitive-radius-full, 9999px);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--semantic-text-muted, #9CA3AF);
+    transition: all var(--semantic-duration-fast, 150ms) ease;
+}
+
+.modal-close:hover {
+    background: var(--semantic-status-error, #EF4444);
+    color: var(--semantic-text-inverse, #FFFFFF);
+}
+
+/* Modal Body */
+.modal-body {
+    padding: var(--primitive-spacing-6, 1.5rem);
+    overflow-y: auto;
+    max-height: calc(90vh - 120px);
+}
+
+/* Modal Footer */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--primitive-spacing-4, 1rem);
+    padding: var(--primitive-spacing-6, 1.5rem);
+    border-top: 1px solid var(--semantic-border-light, rgba(255,255,255,0.05));
+}
+
+/* Modal with Image */
+.modal-image {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: cover;
+}
+
+/* Drawer (Side Modal) */
+.drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    width: 100%;
+    max-width: 500px;
+    background: var(--semantic-bg-surface, #1F2937);
+    z-index: var(--primitive-z-modal, 1040);
+    transition: right var(--semantic-duration-300, 300ms) ease;
+}
+
+.drawer.active {
+    right: 0;
+}
+
+.drawer-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(3, 7, 18, 0.8);
+    backdrop-filter: blur(8px);
+    z-index: var(--primitive-z-modal, 1040);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--semantic-duration-300, 300ms) ease;
+}
+
+.drawer-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--primitive-spacing-6, 1.5rem);
+    border-bottom: 1px solid var(--semantic-border-light, rgba(255,255,255,0.05));
+}
+
+.drawer-body {
+    padding: var(--primitive-spacing-6, 1.5rem);
+    overflow-y: auto;
+    height: calc(100% - 80px);
+}
+
+/* Responsive Modals */
+@media (max-width: 768px) {
+    .modal-container {
+        max-width: 95vw;
+    }
+    
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding: var(--primitive-spacing-4, 1rem);
+    }
+    
+    .drawer {
+        max-width: 100%;
+    }
+}

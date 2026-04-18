@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ka-GE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    
+    <title>ანუკა აბაზაძე | სერვისები და ფასები - Photography Services</title>
+    
+    <meta name="description" content="ანუკა აბაზაძის ფოტოგრაფიის სერვისები: პორტრეტი, ქორწილი, კომერციული და ღონისძიების ფოტოგრაფია. იხილეთ პაკეტები და ფასები.">
+    <meta name="keywords" content="ფოტოგრაფიის სერვისები, ფასები, პორტრეტის ფოტოგრაფია, ქორწილის ფოტოგრაფია">
+    
+    <link rel="canonical" href="https://anukaabazadze.com/services.html">
+    
+    <meta property="og:title" content="ანუკა აბაზაძე | სერვისები და ფასები">
+    <meta property="og:description" content="ფოტოგრაფიის სერვისები: პორტრეტი, ქორწილი, კომერციული და ღონისძიების ფოტოგრაფია.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/tokens/primitives.css">
+    <link rel="stylesheet" href="css/tokens/semantic.css">
+    <link rel="stylesheet" href="css/tokens/components.css">
+    <link rel="stylesheet" href="css/base/reset.css">
+    <link rel="stylesheet" href="css/base/typography.css">
+    <link rel="stylesheet" href="css/base/utilities.css">
+    <link rel="stylesheet" href="css/layouts/header.css">
+    <link rel="stylesheet" href="css/layouts/footer.css">
+    <link rel="stylesheet" href="css/layouts/grid.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="css/components/modals.css">
+    <link rel="stylesheet" href="css/components/navigation.css">
+    <link rel="stylesheet" href="css/components/carousel.css">
+    <link rel="stylesheet" href="css/animations/keyframes.css">
+    <link rel="stylesheet" href="css/animations/transitions.css">
+    <link rel="stylesheet" href="css/animations/scroll-effects.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <style>
+        .page-header {
+            padding: 160px var(--primitive-spacing-6, 1.5rem) 80px;
+            text-align: center;
+            background: transparent;
+            position: relative;
+        }
+        
+        .page-header h1 {
+            font-size: var(--semantic-text-6xl, 3.815rem);
+            margin-bottom: var(--primitive-spacing-4, 1rem);
+            background: linear-gradient(135deg, var(--primitive-gold-100), var(--primitive-gold-400));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: var(--semantic-font-heading);
+            letter-spacing: -0.02em;
+        }
+        
+        .page-header p {
+            background: linear-gradient(135deg, var(--primitive-champagne-100), var(--primitive-gold-300));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: var(--semantic-text-xl, 1.25rem);
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+        
+        .services-detailed {
+            padding: var(--primitive-spacing-16, 4rem) 0;
+        }
+        
+        .service-detailed {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--primitive-spacing-12, 3rem);
+            margin-bottom: var(--primitive-spacing-16, 4rem);
+            padding: var(--primitive-spacing-8, 2rem);
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border-radius: var(--primitive-radius-2xl, 1rem);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        
+        .service-detailed:nth-child(even) {
+            direction: rtl;
+        }
+        
+        .service-detailed:nth-child(even) > * {
+            direction: ltr;
+        }
+        
+        .service-detailed-image img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--primitive-radius-xl, 0.75rem);
+        }
+        
+        .service-detailed-content h3 {
+            font-size: var(--semantic-text-3xl, 1.875rem);
+            margin-bottom: var(--primitive-spacing-4, 1rem);
+            background: linear-gradient(135deg, var(--primitive-gold-100), var(--primitive-gold-400));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .service-detailed-content p {
+            color: var(--primitive-champagne-200);
+            margin-bottom: var(--primitive-spacing-6, 1.5rem);
+        }
+        
+        .service-features {
+            list-style: none;
+            margin: var(--primitive-spacing-6, 1.5rem) 0;
+        }
+        
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: var(--primitive-spacing-3, 0.75rem);
+            margin-bottom: var(--primitive-spacing-3, 0.75rem);
+            color: var(--semantic-text-secondary, #D1D5DB);
+        }
+        
+        .service-features li::before {
+            content: '✓';
+            color: var(--semantic-brand-primary, #D4AF37);
+            font-weight: bold;
+        }
+        
+        .service-price {
+            font-size: var(--semantic-text-4xl, 2.25rem);
+            font-weight: var(--primitive-font-weight-bold, 700);
+            color: var(--semantic-brand-primary, #D4AF37);
+            margin: var(--primitive-spacing-6, 1.5rem) 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto var(--primitive-spacing-12, 3rem);
+        }
+
+        .section-header h2 {
+            font-size: var(--semantic-text-4xl, 2.25rem);
+            background: linear-gradient(135deg, var(--primitive-gold-100), var(--primitive-gold-400));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: var(--primitive-spacing-4, 1rem);
+        }
+
+        .section-header p {
+            background: linear-gradient(135deg, var(--primitive-champagne-100), var(--primitive-gold-300));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: var(--semantic-text-lg, 1.125rem);
+        }
+
+        .section-label {
+            display: inline-flex;
+            font-size: var(--semantic-text-xs, 0.75rem);
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--primitive-gold-200, #FDE68A);
+            font-weight: 500;
+            margin-bottom: var(--primitive-spacing-6, 1.5rem);
+            padding: var(--primitive-spacing-2, 0.5rem) var(--primitive-spacing-4, 1rem);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 9999px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+        }
+        
+        .packages-section {
+            padding: var(--primitive-spacing-16, 4rem) 0;
+            background: transparent;
+        }
+        
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--primitive-spacing-8, 2rem);
+            margin-top: var(--primitive-spacing-8, 2rem);
+        }
+        
+        .package-card {
+            background: linear-gradient(135deg, var(--semantic-bg-surface, #1F2937), rgba(212, 175, 55, 0.05));
+            border-radius: var(--primitive-radius-2xl, 1rem);
+            padding: var(--primitive-spacing-8, 2rem);
+            text-align: center;
+            transition: all var(--semantic-duration-300, 300ms) ease;
+            border: 1px solid var(--semantic-brand-primary, #D4AF37);
+        }
+        
+        .package-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+        
+        .package-card.featured {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+        }
+        
+        .package-card.featured:hover {
+            transform: scale(1.03) translateY(-8px);
+        }
+        
+        .package-name {
+            font-size: var(--semantic-text-xl, 1.25rem);
+            font-weight: var(--primitive-font-weight-bold, 700);
+            color: var(--primitive-champagne-50);
+            margin-bottom: var(--primitive-spacing-4, 1rem);
+        }
+        
+        .package-price {
+            font-size: var(--semantic-text-4xl, 2.25rem);
+            font-weight: var(--primitive-font-weight-bold, 700);
+            color: var(--semantic-brand-primary, #D4AF37);
+            margin-bottom: var(--primitive-spacing-6, 1.5rem);
+        }
+        
+        .package-features {
+            list-style: none;
+            margin: var(--primitive-spacing-6, 1.5rem) 0;
+        }
+        
+        .package-features li {
+            padding: var(--primitive-spacing-2, 0.5rem) 0;
+            border-bottom: 1px solid var(--semantic-border-light, rgba(255,255,255,0.05));
+            color: var(--semantic-text-secondary, #D1D5DB);
+        }
+        
+        .featured-badge {
+            display: inline-block;
+            padding: var(--primitive-spacing-1, 0.25rem) var(--primitive-spacing-3, 0.75rem);
+            background: var(--semantic-brand-primary, #D4AF37);
+            color: var(--semantic-text-inverse, #000000);
+            font-size: var(--semantic-text-xs, 0.75rem);
+            font-weight: var(--primitive-font-weight-bold, 700);
+            border-radius: var(--primitive-radius-full, 9999px);
+            margin-bottom: var(--primitive-spacing-4, 1rem);
+            display: inline-block;
+        }
+        
+        .faq-section {
+            padding: var(--primitive-spacing-16, 4rem) 0;
+        }
+        
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid var(--semantic-border-light, rgba(255,255,255,0.05));
+            padding: var(--primitive-spacing-4, 1rem) 0;
+        }
+        
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: var(--primitive-spacing-2, 0.5rem) 0;
+            font-weight: var(--primitive-font-weight-semibold, 600);
+            font-size: var(--semantic-text-lg, 1.125rem);
+        }
+        
+        .faq-question span {
+            background: linear-gradient(135deg, var(--primitive-champagne-100), var(--primitive-gold-300));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover span {
+            background: linear-gradient(135deg, var(--primitive-gold-100), var(--primitive-gold-400));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .faq-icon {
+            font-size: var(--semantic-text-xl, 1.25rem);
+            transition: transform var(--semantic-duration-200, 200ms) ease;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--semantic-duration-300, 300ms) ease;
+            color: #EFE8D8;
+            padding-left: 0;
+            line-height: 1.6;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-top: var(--primitive-spacing-4, 1rem);
+        }
+        
+        .cta {
+            position: relative;
+            padding: var(--primitive-spacing-20, 5rem) 0;
+            background: transparent;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .cta-container {
+            position: relative;
+            z-index: 1;
+            max-width: var(--semantic-layout-container, 1280px);
+            margin: 0 auto;
+            padding: var(--primitive-spacing-8, 2rem);
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: var(--semantic-text-5xl, 3rem);
+            background: linear-gradient(135deg, var(--primitive-gold-100), var(--primitive-gold-400));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: var(--primitive-spacing-6, 1.5rem);
+        }
+
+        .cta-content p {
+            font-size: var(--semantic-text-lg, 1.125rem);
+            color: var(--primitive-champagne-200, #EFE8D8);
+            margin-bottom: var(--primitive-spacing-8, 2rem);
+        }
+
+        .cta-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.08), transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        @media (max-width: 968px) {
+            .service-detailed,
+            .service-detailed:nth-child(even) {
+                grid-template-columns: 1fr;
+                direction: ltr;
+            }
+            
+            .packages-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .package-card.featured {
+                transform: scale(1);
+            }
+            
+            .package-card.featured:hover {
+                transform: scale(1.02);
+            }
+            
+            .page-header h1 {
+                font-size: var(--semantic-text-3xl, 1.875rem);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 100px var(--primitive-spacing-4, 1rem) 40px;
+            }
+            
+            .service-detailed {
+                padding: var(--primitive-spacing-6, 1.5rem);
+            }
+            
+            .service-price {
+                font-size: var(--semantic-text-3xl, 1.875rem);
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+    
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">ANU<span class="logo-accent">KA</span></span>
+                <span class="logo-subtitle">ABAZADZE</span>
+            </a>
+            
+            <nav class="nav-main">
+                <a href="index.html" class="nav-link">HOME</a>
+                <a href="about.html" class="nav-link">STORY</a>
+                <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
+                <a href="services.html" class="nav-link active">SERVICES</a>
+                <a href="contact.html" class="nav-link">CONTACT</a>
+                <a href="blog.html" class="nav-link">BLOG</a>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="search-toggle" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="search-overlay">
+            <div class="search-container">
+                <input type="text" placeholder="Search..." id="searchInput">
+                <button class="search-close">✕</button>
+            </div>
+        </div>
+    </header>
+    
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-container">
+            <nav class="mobile-nav">
+                <a href="index.html">HOME</a>
+                <a href="about.html">STORY</a>
+                <a href="portfolio.html">PORTFOLIO</a>
+                <a href="services.html">SERVICES</a>
+                <a href="contact.html">CONTACT</a>
+                <a href="blog.html">BLOG</a>
+            </nav>
+            <div class="mobile-menu-info">
+                <p>anuka@abazadze.com</p>
+                <p>+995 599 123 456</p>
+                <p>Kutaisi, Georgia</p>
+            </div>
+        </div>
+    </div>
+    
+    <main>
+        <section class="page-header">
+            <div class="hero-subtitle" style="display: inline-block; font-size: var(--semantic-text-xs, 0.75rem); letter-spacing: 0.25em; text-transform: uppercase; color: var(--primitive-gold-200); font-weight: 500; margin-bottom: var(--primitive-spacing-6, 1.5rem); padding: var(--primitive-spacing-2, 0.5rem) var(--primitive-spacing-4, 1rem); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 9999px; background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(8px);">SERVICES</div>
+            <h1>Premium Photography<br>Experiences</h1>
+            <p>Tailored sessions designed to capture your most precious moments</p>
+        </section>
+        
+        <section class="services-detailed">
+            <div class="container">
+                <div class="service-detailed">
+                    <div class="service-detailed-image">
+                        <img src="https://images.pexels.com/photos/2253879/pexels-photo-2253879.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Fine Art Portrait" loading="lazy">
+                    </div>
+                    <div class="service-detailed-content">
+                        <h3>Fine Art Portraits</h3>
+                        <p>Artistic portrait sessions that capture your essence with cinematic lighting and composition. Perfect for personal branding, milestone celebrations, or simply preserving this moment in time.</p>
+                        <ul class="service-features">
+                            <li>2-3 hour studio or location session</li>
+                            <li>Professional hair and makeup styling (optional)</li>
+                            <li>Multiple wardrobe changes</li>
+                            <li>40+ professionally edited digital images</li>
+                            <li>Private online gallery with download access</li>
+                        </ul>
+                        <div class="service-price">Starting at GEL 850</div>
+                        <a href="contact.html" class="btn btn-primary">Book Portrait Session →</a>
+                    </div>
+                </div>
+                
+                <div class="service-detailed">
+                    <div class="service-detailed-image">
+                        <img src="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Wedding Photography" loading="lazy">
+                    </div>
+                    <div class="service-detailed-content">
+                        <h3>Wedding & Elopement</h3>
+                        <p>Timeless wedding photography that tells your love story through authentic, emotional imagery. From intimate elopements to grand celebrations, every moment is captured with artistry and care.</p>
+                        <ul class="service-features">
+                            <li>Full-day coverage (6-12 hours)</li>
+                            <li>Second photographer available</li>
+                            <li>Engagement session included</li>
+                            <li>400+ professionally edited images</li>
+                            <li>Custom wedding album design</li>
+                        </ul>
+                        <div class="service-price">Starting at GEL 2,500</div>
+                        <a href="contact.html" class="btn btn-primary">Inquire About Wedding →</a>
+                    </div>
+                </div>
+                
+                <div class="service-detailed">
+                    <div class="service-detailed-image">
+                        <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Commercial Photography" loading="lazy">
+                    </div>
+                    <div class="service-detailed-content">
+                        <h3>Commercial & Branding</h3>
+                        <p>Professional brand photography that elevates your business identity. Perfect for websites, social media, marketing campaigns, and product launches.</p>
+                        <ul class="service-features">
+                            <li>Half-day or full-day coverage</li>
+                            <li>Location or studio shoot</li>
+                            <li>Product and lifestyle photography</li>
+                            <li>Team and headshot sessions</li>
+                            <li>Commercial usage rights included</li>
+                        </ul>
+                        <div class="service-price">Starting at GEL 1,200</div>
+                        <a href="contact.html" class="btn btn-primary">Request Quote →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="packages-section">
+            <div class="container">
+                <div class="section-header" style="text-align: center;">
+                    <div class="section-label" style="justify-content: center;">PACKAGES</div>
+                    <h2>Choose Your Experience</h2>
+                    <p>Curated packages designed for every need and budget</p>
+                </div>
+                
+                <div class="packages-grid" id="packagesGrid">
+                    <!-- Packages will be dynamically loaded here by script -->
+                </div>
+            </div>
+        </section>
+        
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header" style="text-align: center;">
+                    <div class="section-label" style="justify-content: center;">FAQ</div>
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Everything you need to know about working with me</p>
+                </div>
+                
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How far in advance should I book?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">For portrait sessions, 2-4 weeks in advance is recommended. For weddings, 6-12 months is ideal, especially during peak season (May-October).</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you travel outside of Kutaisi?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">Yes! I photograph throughout Georgia and internationally. Travel fees may apply depending on the location. Contact me for a custom quote.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How will I receive my photos?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">You'll receive a private online gallery with high-resolution downloads, sharing options, and professional print ordering. Delivery time is 2-4 weeks for portraits, 4-6 weeks for weddings.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I order prints and albums?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">Absolutely! I offer professional fine art prints, canvases, and premium heirloom albums through my lab partners. All products are archival quality.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What's your cancellation policy?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">A 50% non-refundable retainer is required to secure your date. The remaining balance is due one week before the session. In case of emergency, we can reschedule subject to availability.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta">
+            <div class="cta-container">
+                <div class="cta-content">
+                    <h2>Ready to Book Your Session?</h2>
+                    <p>Let's create something beautiful together.</p>
+                    <a href="contact.html" class="btn btn-primary btn-large">CONTACT ME →</a>
+                </div>
+                <div class="cta-bg"></div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">ANUKA ABAZADZE</a>
+                <p>Premium Photography Studio<br>Based in Kutaisi, Georgia</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5v.01"/></svg></a>
+                    <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                    <a href="#" aria-label="Pinterest"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M8 22.5c-1-3-1-4 0-7 0 0 1 1 3 1s4-1.5 5-4 0-6-3-7c-3-1-6 0-8 2-1 1-2 2-2 4 0 3 2 5 4 5s2-1 2-2"/><circle cx="12" cy="12" r="10"/></svg></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="services.html">Services</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <a href="contact.html">Contact</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Pinterest</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Studio</h4>
+                    <p>Kutaisi, Georgia</p>
+                    <p>+995 599 123 456</p>
+                    <p>anuka@abazadze.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Anuka Abazadze. All rights reserved.</p>
+            <p>Designed with <span>♥</span> by Vako Lagvilava</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+
+        // Dynamic Packages
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('packagesGrid');
+            if (!grid) return;
+            
+            let packages = [];
+            const savedPackages = localStorage.getItem('anuka_packages');
+            if (savedPackages) {
+                packages = JSON.parse(savedPackages);
+            } else {
+                // Default fallback if admin hasn't visited yet
+                packages = [
+                    { id: 1, name: 'Essential', price: 850, discount: null, featured: false, features: ['2-hour session', '1 location', '30 digital images', 'Online gallery', 'Print release'] },
+                    { id: 2, name: 'Signature', price: 1500, discount: null, featured: true, features: ['4-hour session', '2 locations', '60 digital images', 'Online gallery + USB', '10 fine art prints'] },
+                    { id: 3, name: "Collector's", price: 2500, discount: null, featured: false, features: ['Full-day session', 'Multiple locations', '120+ digital images', 'Premium album included', 'Wall art credit'] }
+                ];
+            }
+            
+            grid.innerHTML = packages.map(pkg => {
+                const priceHtml = pkg.discount 
+                    ? `<span style="text-decoration: line-through; color: var(--semantic-text-muted); font-size: 0.6em; margin-right: 0.5rem;">GEL ${pkg.price}</span>GEL ${pkg.discount}` 
+                    : `GEL ${pkg.price}`;
+                    
+                return `
+                    <div class="package-card ${pkg.featured ? 'featured' : ''}">
+                        ${pkg.featured ? '<div class="featured-badge">MOST POPULAR</div>' : ''}
+                        <div class="package-name">${pkg.name}</div>
+                        <div class="package-price">${priceHtml}</div>
+                        <ul class="package-features">
+                            ${pkg.features.map(f => `<li>${f}</li>`).join('')}
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Select Package</a>
+                    </div>
+                `;
+            }).join('');
+        });
+    </script>
+</body>
+</html>

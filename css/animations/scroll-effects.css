@@ -1,0 +1,192 @@
+/* ============================================
+   SCROLL EFFECTS
+   Parallax, reveal on scroll, sticky elements
+   NO !important - Professional Grade
+   ============================================ */
+
+/* Reveal on Scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all var(--semantic-duration-700, 700ms) var(--semantic-easing-default, ease);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all var(--semantic-duration-700, 700ms) var(--semantic-easing-default, ease);
+}
+
+.reveal-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all var(--semantic-duration-700, 700ms) var(--semantic-easing-default, ease);
+}
+
+.reveal-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all var(--semantic-duration-500, 500ms) var(--semantic-easing-default, ease);
+}
+
+.reveal-scale.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Delay Classes */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* Parallax Effect */
+.parallax {
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(0);
+    will-change: transform;
+}
+
+/* Sticky Elements */
+.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: var(--primitive-z-sticky, 1020);
+}
+
+.sticky-header {
+    position: sticky;
+    top: 80px;
+    z-index: var(--primitive-z-sticky, 1020);
+}
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--semantic-brand-primary, #D4AF37);
+    transform-origin: 0%;
+    transform: scaleX(0);
+    z-index: var(--primitive-z-toast, 1070);
+}
+
+/* Section Fade In */
+.section-fade {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all var(--semantic-duration-700, 700ms) var(--semantic-easing-default, ease);
+}
+
+.section-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Image Reveal on Scroll */
+.image-reveal {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-reveal img {
+    transform: scale(1.1);
+    transition: transform var(--semantic-duration-1000, 1000ms) var(--semantic-easing-default, ease);
+}
+
+.image-reveal.visible img {
+    transform: scale(1);
+}
+
+.image-reveal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--semantic-brand-primary, #D4AF37);
+    z-index: 1;
+    transform: translateX(-100%);
+    transition: transform var(--semantic-duration-800, 800ms) var(--semantic-easing-default, ease);
+}
+
+.image-reveal.visible::before {
+    transform: translateX(100%);
+}
+
+/* Text Reveal */
+.text-reveal {
+    overflow: hidden;
+}
+
+.text-reveal span {
+    display: inline-block;
+    transform: translateY(100%);
+    transition: transform var(--semantic-duration-500, 500ms) var(--semantic-easing-default, ease);
+}
+
+.text-reveal.visible span {
+    transform: translateY(0);
+}
+
+/* Scroll-triggered animations for cards */
+.card-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all var(--semantic-duration-500, 500ms) var(--semantic-easing-default, ease);
+}
+
+.card-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger Children */
+.stagger-children > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all var(--semantic-duration-400, 400ms) var(--semantic-easing-default, ease);
+}
+
+.stagger-children.visible > *:nth-child(1) { transition-delay: 0s; }
+.stagger-children.visible > *:nth-child(2) { transition-delay: 0.1s; }
+.stagger-children.visible > *:nth-child(3) { transition-delay: 0.2s; }
+.stagger-children.visible > *:nth-child(4) { transition-delay: 0.3s; }
+.stagger-children.visible > *:nth-child(5) { transition-delay: 0.4s; }
+.stagger-children.visible > *:nth-child(6) { transition-delay: 0.5s; }
+
+.stagger-children.visible > * {
+    opacity: 1;
+    transform: translateY(0);
+}

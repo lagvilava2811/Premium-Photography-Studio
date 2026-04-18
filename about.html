@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="ka-GE">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+
+    <title>ანუკა აბაზაძე | ჩემი ამბავი - Photography Studio</title>
+
+    <meta
+      name="description"
+      content="ანუკა აბაზაძის შესახებ - 8+ წლიანი გამოცდილება ფოტოგრაფიაში. ჩემი მოგზაურობა, ფილოსოფია და ხედვა. Premium ფოტოგრაფი ქუთაისში."
+    />
+    <meta
+      name="keywords"
+      content="ჩემს შესახებ, ფოტოგრაფის ამბავი, Anuka Abazadze about, ფილოსოფია"
+    />
+    <meta name="author" content="Anuka Abazadze" />
+
+    <link rel="canonical" href="https://anukaabazadze.com/about.html" />
+
+    <meta property="og:title" content="ანუკა აბაზაძე | ჩემი ამბავი" />
+    <meta
+      property="og:description"
+      content="8+ წლიანი გამოცდილება ფოტოგრაფიაში. ჩემი მოგზაურობა, ფილოსოფია და ხედვა."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/tokens/primitives.css" />
+    <link rel="stylesheet" href="css/tokens/semantic.css" />
+    <link rel="stylesheet" href="css/tokens/components.css" />
+    <link rel="stylesheet" href="css/base/reset.css" />
+    <link rel="stylesheet" href="css/base/typography.css" />
+    <link rel="stylesheet" href="css/base/utilities.css" />
+    <link rel="stylesheet" href="css/layouts/header.css" />
+    <link rel="stylesheet" href="css/layouts/footer.css" />
+    <link rel="stylesheet" href="css/layouts/grid.css" />
+    <link rel="stylesheet" href="css/components/buttons.css" />
+    <link rel="stylesheet" href="css/components/cards.css" />
+    <link rel="stylesheet" href="css/components/modals.css" />
+    <link rel="stylesheet" href="css/components/navigation.css" />
+    <link rel="stylesheet" href="css/components/carousel.css" />
+    <link rel="stylesheet" href="css/animations/keyframes.css" />
+    <link rel="stylesheet" href="css/animations/transitions.css" />
+    <link rel="stylesheet" href="css/animations/scroll-effects.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <style>
+      .page-header {
+        padding: 160px var(--primitive-spacing-6, 1.5rem) 80px;
+        text-align: center;
+        background: transparent;
+        position: relative;
+      }
+
+      .page-header h1 {
+        font-size: var(--semantic-text-6xl, 3.815rem);
+        margin-bottom: var(--primitive-spacing-4, 1rem);
+        background: linear-gradient(
+          135deg,
+          var(--primitive-gold-100),
+          var(--primitive-gold-400)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: var(--semantic-font-heading);
+        letter-spacing: -0.02em;
+      }
+
+      .page-header p {
+        background: linear-gradient(
+          135deg,
+          var(--primitive-champagne-100),
+          var(--primitive-gold-300)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: var(--semantic-text-xl, 1.25rem);
+        font-weight: 300;
+        letter-spacing: 0.05em;
+      }
+
+      .story-section {
+        padding: var(--primitive-spacing-16, 4rem) 0;
+      }
+
+      .story-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--primitive-spacing-12, 3rem);
+        align-items: center;
+      }
+
+      .story-image {
+        position: relative;
+        border-radius: var(--primitive-radius-2xl, 1rem);
+        overflow: hidden;
+      }
+
+      .story-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .story-image .badge {
+        position: absolute;
+        bottom: var(--primitive-spacing-6, 1.5rem);
+        right: var(--primitive-spacing-6, 1.5rem);
+        background: var(--semantic-brand-primary, #d4af37);
+        color: var(--semantic-text-inverse, #000000);
+        padding: var(--primitive-spacing-2, 0.5rem)
+          var(--primitive-spacing-4, 1rem);
+        border-radius: var(--primitive-radius-full, 9999px);
+        font-size: var(--semantic-text-sm, 0.875rem);
+        font-weight: var(--primitive-font-weight-semibold, 600);
+      }
+
+      .story-content h2 {
+        font-size: var(--semantic-text-3xl, 1.875rem);
+        margin-bottom: var(--primitive-spacing-6, 1.5rem);
+        background: linear-gradient(
+          135deg,
+          var(--primitive-gold-100),
+          var(--primitive-gold-400)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .story-content p {
+        color: var(--primitive-champagne-200);
+        line-height: var(--semantic-leading-relaxed, 1.625);
+        margin-bottom: var(--primitive-spacing-6, 1.5rem);
+      }
+
+      .signature {
+        margin-top: var(--primitive-spacing-8, 2rem);
+        padding-top: var(--primitive-spacing-6, 1.5rem);
+        border-top: 1px solid
+          var(--semantic-border-light, rgba(255, 255, 255, 0.1));
+        font-family: var(--semantic-font-heading, "Playfair Display", serif);
+        font-size: var(--semantic-text-xl, 1.25rem);
+        color: var(--semantic-brand-primary, #d4af37);
+      }
+
+      .timeline-section {
+        background: transparent;
+        padding: var(--primitive-spacing-16, 4rem) 0;
+        position: relative;
+        z-index: 2;
+      }
+
+      .timeline-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--primitive-spacing-6, 1.5rem);
+        margin-top: var(--primitive-spacing-8, 2rem);
+      }
+
+      .timeline-item {
+        text-align: center;
+        padding: var(--primitive-spacing-6, 1.5rem);
+        background: var(--semantic-glass-bg);
+        backdrop-filter: var(--semantic-glass-blur);
+        -webkit-backdrop-filter: var(--semantic-glass-blur);
+        border-radius: var(--primitive-radius-xl, 0.75rem);
+        border: 1px solid var(--semantic-glass-border);
+        box-shadow: var(--semantic-glass-shadow);
+        transition: all var(--semantic-duration-300, 300ms)
+          var(--semantic-easing-emphasized);
+      }
+
+      .timeline-item:hover {
+        transform: translateY(-6px);
+        border-color: rgba(212, 175, 55, 0.4);
+        box-shadow: 0 12px 40px rgba(212, 175, 55, 0.08);
+      }
+
+      .timeline-year {
+        font-family: var(--semantic-font-heading, "Playfair Display", serif);
+        font-size: var(--semantic-text-3xl, 1.875rem);
+        font-weight: var(--primitive-font-weight-bold, 700);
+        color: var(--semantic-brand-primary, #d4af37);
+        margin-bottom: var(--primitive-spacing-3, 0.75rem);
+      }
+
+      .timeline-title {
+        font-size: var(--semantic-text-base, 1rem);
+        font-weight: var(--primitive-font-weight-semibold, 600);
+        background: linear-gradient(
+          135deg,
+          var(--primitive-gold-100),
+          var(--primitive-gold-400)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: var(--primitive-spacing-2, 0.5rem);
+      }
+
+      .timeline-desc {
+        font-size: var(--semantic-text-sm, 0.875rem);
+        color: var(--primitive-champagne-300);
+      }
+
+      .values-section {
+        padding: var(--primitive-spacing-16, 4rem) 0;
+      }
+
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--primitive-spacing-8, 2rem);
+        margin-top: var(--primitive-spacing-8, 2rem);
+      }
+
+      .value-card {
+        text-align: center;
+        padding: var(--primitive-spacing-8, 2rem);
+        background: var(--semantic-glass-bg);
+        backdrop-filter: var(--semantic-glass-blur);
+        -webkit-backdrop-filter: var(--semantic-glass-blur);
+        border-radius: var(--primitive-radius-2xl, 1rem);
+        border: 1px solid var(--semantic-glass-border);
+        box-shadow: var(--semantic-glass-shadow);
+        transition: all var(--semantic-duration-300, 300ms)
+          var(--semantic-easing-emphasized);
+      }
+
+      .value-card:hover {
+        transform: translateY(-8px);
+        border-color: rgba(212, 175, 55, 0.4);
+        box-shadow: 0 12px 40px rgba(212, 175, 55, 0.08);
+      }
+
+      .value-icon {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto var(--primitive-spacing-6, 1.5rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(212, 175, 55, 0.1);
+        border-radius: var(--primitive-radius-full, 9999px);
+        color: var(--semantic-brand-primary, #d4af37);
+      }
+
+      .value-card h3 {
+        font-size: var(--semantic-text-xl, 1.25rem);
+        margin-bottom: var(--primitive-spacing-3, 0.75rem);
+        background: linear-gradient(
+          135deg,
+          var(--primitive-gold-100),
+          var(--primitive-gold-400)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .value-card p {
+        color: var(--primitive-champagne-200);
+        font-size: var(--semantic-text-sm, 0.875rem);
+        line-height: var(--semantic-leading-relaxed, 1.625);
+      }
+
+      @media (max-width: 968px) {
+        .story-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .timeline-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .values-grid {
+          grid-template-columns: 1fr;
+          max-width: 400px;
+          margin: 0 auto;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .page-header {
+          padding: 100px var(--primitive-spacing-4, 1rem) 40px;
+        }
+
+        .page-header h1 {
+          font-size: var(--semantic-text-3xl, 1.875rem);
+        }
+
+        .timeline-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .section-header {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto var(--primitive-spacing-12, 3rem);
+      }
+
+      .section-header h2 {
+        font-size: var(--semantic-text-4xl, 2.25rem);
+        background: linear-gradient(
+          135deg,
+          var(--primitive-gold-100),
+          var(--primitive-gold-400)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: var(--primitive-spacing-4, 1rem);
+      }
+
+      .section-header p {
+        background: linear-gradient(
+          135deg,
+          var(--primitive-champagne-100),
+          var(--primitive-gold-300)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: var(--semantic-text-lg, 1.125rem);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <header class="header" id="header">
+      <div class="header-container">
+        <a href="index.html" class="logo">
+          <span class="logo-text">ANU<span class="logo-accent">KA</span></span>
+          <span class="logo-subtitle">ABAZADZE</span>
+        </a>
+
+        <nav class="nav-main">
+          <a href="index.html" class="nav-link">HOME</a>
+          <a href="about.html" class="nav-link active">STORY</a>
+          <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
+          <a href="services.html" class="nav-link">SERVICES</a>
+          <a href="contact.html" class="nav-link">CONTACT</a>
+          <a href="blog.html" class="nav-link">BLOG</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="search-toggle" aria-label="Search">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+          </button>
+          <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="search-overlay">
+        <div class="search-container">
+          <input type="text" placeholder="Search..." id="searchInput" />
+          <button class="search-close">✕</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-container">
+        <nav class="mobile-nav">
+          <a href="index.html">HOME</a>
+          <a href="about.html">STORY</a>
+          <a href="portfolio.html">PORTFOLIO</a>
+          <a href="services.html">SERVICES</a>
+          <a href="contact.html">CONTACT</a>
+          <a href="blog.html">BLOG</a>
+        </nav>
+        <div class="mobile-menu-info">
+          <p>anuka@abazadze.com</p>
+          <p>+995 599 123 456</p>
+          <p>Kutaisi, Georgia</p>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="page-header">
+        <div
+          class="hero-subtitle"
+          style="
+            display: inline-block;
+            font-size: var(--semantic-text-xs, 0.75rem);
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--primitive-gold-200);
+            font-weight: 500;
+            margin-bottom: var(--primitive-spacing-6, 1.5rem);
+            padding: var(--primitive-spacing-2, 0.5rem)
+              var(--primitive-spacing-4, 1rem);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 9999px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+          "
+        >
+          MY STORY
+        </div>
+        <h1>Behind the Lens</h1>
+        <p>The journey, philosophy, and passion that drive my photography</p>
+      </section>
+
+      <section class="story-section">
+        <div class="container">
+          <div class="story-grid">
+            <div class="story-image">
+              <img
+                src="assets/images/aaaaaana.jfif"
+                alt="Anuka Abazadze"
+                loading="lazy"
+              />
+              <div class="badge">EST. 2014</div>
+            </div>
+            <div class="story-content">
+              <h2>Finding Light in Every Moment</h2>
+              <p>
+                My journey into photography began over a decade ago, when I
+                first picked up a camera to document the stunning landscapes of
+                my homeland, Georgia. What started as a personal passion quickly
+                evolved into a lifelong dedication to the art of visual
+                storytelling.
+              </p>
+              <p>
+                After studying fine art photography in Tbilisi and completing
+                workshops in Europe, I returned to my hometown of Kutaisi to
+                establish my studio. Here, surrounded by ancient architecture
+                and breathtaking nature, I found my true voice as a
+                photographer.
+              </p>
+              <p>
+                Today, I specialize in creating authentic, emotionally resonant
+                imagery that captures the essence of my subjects. Whether it's
+                the intimacy of a wedding, the power of a portrait, or the
+                energy of a commercial campaign, my approach remains the same —
+                to reveal the beauty that already exists.
+              </p>
+              <div class="signature">— Anuka Abazadze</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="timeline-section">
+        <div class="container">
+          <div class="section-header" style="text-align: center">
+            <div
+              style="
+                display: inline-block;
+                font-size: var(--semantic-text-xs, 0.75rem);
+                letter-spacing: 0.25em;
+                text-transform: uppercase;
+                color: var(--primitive-gold-200);
+                font-weight: 500;
+                margin-bottom: var(--primitive-spacing-6, 1.5rem);
+                padding: var(--primitive-spacing-2, 0.5rem)
+                  var(--primitive-spacing-4, 1rem);
+                border: 1px solid rgba(212, 175, 55, 0.3);
+                border-radius: 9999px;
+                background: rgba(0, 0, 0, 0.4);
+                backdrop-filter: blur(8px);
+              "
+            >
+              MILESTONES
+            </div>
+            <h2>My Journey</h2>
+            <p>Key moments that shaped my career</p>
+          </div>
+
+          <div class="timeline-grid">
+            <div class="timeline-item">
+              <div class="timeline-year">2014</div>
+              <div class="timeline-title">First Exhibition</div>
+              <div class="timeline-desc">
+                Solo exhibition "Kutaisi Through My Lens" at the City Gallery
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2016</div>
+              <div class="timeline-title">Studio Opening</div>
+              <div class="timeline-desc">
+                Established my first professional studio in Kutaisi
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2019</div>
+              <div class="timeline-title">International Award</div>
+              <div class="timeline-desc">
+                Gold medal at the International Photography Awards
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2024</div>
+              <div class="timeline-title">200+ Clients</div>
+              <div class="timeline-desc">
+                Celebrating over 200 satisfied clients worldwide
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="values-section">
+        <div class="container">
+          <div class="section-header" style="text-align: center">
+            <div
+              style="
+                display: inline-block;
+                font-size: var(--semantic-text-xs, 0.75rem);
+                letter-spacing: 0.25em;
+                text-transform: uppercase;
+                color: var(--primitive-gold-200);
+                font-weight: 500;
+                margin-bottom: var(--primitive-spacing-6, 1.5rem);
+                padding: var(--primitive-spacing-2, 0.5rem)
+                  var(--primitive-spacing-4, 1rem);
+                border: 1px solid rgba(212, 175, 55, 0.3);
+                border-radius: 9999px;
+                background: rgba(0, 0, 0, 0.4);
+                backdrop-filter: blur(8px);
+              "
+            >
+              MY VALUES
+            </div>
+            <h2>What Drives Me</h2>
+            <p>The principles that guide every project</p>
+          </div>
+
+          <div class="values-grid">
+            <div class="value-card">
+              <div class="value-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <path
+                    d="M12 2v4M12 22v-4M4 12H2M22 12h-2M19.07 4.93l-2.83 2.83M6.34 17.66l-2.83 2.83M17.66 6.34l2.83-2.83M4.93 19.07l2.83-2.83"
+                  />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </div>
+              <h3>Authenticity</h3>
+              <p>
+                I believe in capturing real moments, genuine emotions, and
+                unscripted beauty. No forced poses — just you being you.
+              </p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <path d="M20 12H4M12 4v16M4 4h16v16H4z" />
+                </svg>
+              </div>
+              <h3>Excellence</h3>
+              <p>
+                From the first consultation to the final delivery, I'm committed
+                to providing an exceptional experience and premium quality.
+              </p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <path
+                    d="M21 10.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8.5"
+                  />
+                  <path d="M16 2v4h4M22 2L10 14" />
+                </svg>
+              </div>
+              <h3>Creativity</h3>
+              <p>
+                Every session is a unique artistic collaboration. I bring fresh
+                perspectives and innovative techniques to each project.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="cta-container">
+          <div class="cta-content" style="text-align: center; max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+            <h2
+              style="
+                font-size: 3rem;
+                background: linear-gradient(
+                  135deg,
+                  var(--primitive-gold-100),
+                  var(--primitive-gold-400)
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-bottom: 1.5rem;
+              "
+            >
+              Let's Create Together
+            </h2>
+            <p
+              style="
+                font-size: 1.125rem;
+                background: linear-gradient(
+                  135deg,
+                  var(--primitive-champagne-100),
+                  var(--primitive-gold-300)
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-bottom: 2rem;
+              "
+            >
+              I'd love to hear your story and help bring your vision to life.
+            </p>
+            <a href="contact.html" class="btn btn-primary btn-large"
+              >START THE CONVERSATION →</a
+            >
+          </div>
+          <div class="cta-bg"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">ANUKA ABAZADZE</a>
+          <p>Premium Photography Studio<br />Based in Kutaisi, Georgia</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <path d="M17.5 6.5v.01" /></svg
+            ></a>
+            <a href="#" aria-label="Facebook"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                /></svg
+            ></a>
+            <a href="#" aria-label="Pinterest"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path
+                  d="M8 22.5c-1-3-1-4 0-7 0 0 1 1 3 1s4-1.5 5-4 0-6-3-7c-3-1-6 0-8 2-1 1-2 2-2 4 0 3 2 5 4 5s2-1 2-2"
+                />
+                <circle cx="12" cy="12" r="10" /></svg
+            ></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html">Blog</a>
+          </div>
+          <div class="footer-col">
+            <h4>Connect</h4>
+            <a href="contact.html">Contact</a>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Pinterest</a>
+          </div>
+          <div class="footer-col">
+            <h4>Studio</h4>
+            <p>Kutaisi, Georgia</p>
+            <p>+995 599 123 456</p>
+            <p>anuka@abazadze.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Anuka Abazadze. All rights reserved.</p>
+        <p>Designed with <span>♥</span> by Vako Lagvilava</p>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
