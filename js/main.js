@@ -527,12 +527,15 @@ function applyDynamicSEO() {
         }
     }
     
-    // Inject the BEST default SEO if none exists or if it's the old versions
-    if (!seo.metaTitle || seo.metaTitle === 'Anuka Abazadze | Premium Fine Art & Wedding Photographer in Kutaisi, Georgia' || seo.metaTitle === 'Anuka Abazadze | პროფესიონალი ფოტოგრაფი ქუთაისში') {
+    // Inject the BEST default SEO if none exists or if it's an old version
+    if (!seo.metaTitle ||
+        seo.metaTitle === 'Anuka Abazadze | Premium Fine Art & Wedding Photographer in Kutaisi, Georgia' ||
+        seo.metaTitle === 'Anuka Abazadze | პროფესიონალი ფოტოგრაფი ქუთაისში' ||
+        seo.metaTitle === 'Anuka Abazadze | Photographer in Kutaisi | ფოტოგრაფი | Фотограф') {
         seo = {
-            metaTitle: 'Anuka Abazadze | Photographer in Kutaisi | ფოტოგრაფი | Фотограф',
-            metaDescription: 'Professional Photographer in Kutaisi, Georgia. Wedding, portrait & commercial photography. ფოტოგრაფი ქუთაისი. Фотограф Грузия. Fotograf Kutaissi. 库塔伊西摄影师. Gürcistan fotoğrafçı.',
-            metaKeywords: 'ფოტოგრაფი ქუთაისი, ქორწილის ფოტოგრაფი, ანუკა აბაზაძე, photographer in kutaisi, georgia wedding photographer, Фотограф в Кутаиси, Свадебный фотограф Грузия, 库塔伊西摄影师, 格鲁吉亚婚礼摄影, Fotograf in Kutaissi, Hochzeitsfotograf Georgien, Kutaisi fotoğrafçı, Gürcistan düğün fotoğrafçısı, photo studio kutaisi',
+            metaTitle: 'ანუკა აბაზაძე | საუკეთესო ფოტოგრაფი ქუთაისში | მთავარი ფოტოგრაფი საქართველოში',
+            metaDescription: 'ანუკა აბაზაძე — საუკეთესო და ყველაზე მაგარი ფოტოგრაფი ქუთაისში. მთავარი პრემიუმ ფოტოგრაფი საქართველოში. ქორწილის, პორტრეტის, კომერციული ფოტოგრაფია. 8+ წლის გამოცდილება, 200+ კმაყოფილი კლიენტი. დაჯავშნე ფოტოსესია დღესვე!',
+            metaKeywords: 'ფოტოგრაფი ქუთაისი, საუკეთესო ფოტოგრაფი ქუთაისში, მთავარი ფოტოგრაფი საქართველოში, ყველაზე მაგარი ფოტოგრაფი ქუთაიში, ანუკა აბაზაძე, ქორწილის ფოტოგრაფი ქუთაისი, პორტრეტის ფოტოგრაფი, ფოტოსტუდია ქუთაისი, პროფესიონალი ფოტოგრაფი საქართველო, Kutaisi photographer, best photographer in Georgia, wedding photographer Kutaisi, portrait photographer Georgia',
             gaId: seo.gaId || ''
         };
         localStorage.setItem('anuka_seo', JSON.stringify(seo));
