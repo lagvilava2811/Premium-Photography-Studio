@@ -10,7 +10,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: var(--primitive-z-sticky, 1020);
+  z-index: 9999; /* Highest priority */
   padding: var(--primitive-spacing-4, 1rem) var(--primitive-spacing-6, 1.5rem);
   transition: all var(--semantic-duration-base, 200ms)
     var(--semantic-easing-default, ease);
@@ -141,7 +141,9 @@
   justify-content: center;
   border-radius: var(--primitive-radius-full, 9999px);
   background: rgba(255, 255, 255, 0.05);
-  color: var(--semantic-text-primary, #ffffff);
+  color: var(--semantic-brand-primary, #d4af37); /* Always Brand Gold */
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+  border: 1px solid rgba(212, 175, 55, 0.3);
   transition: all var(--semantic-duration-fast, 150ms)
     var(--semantic-easing-default, ease);
   cursor: pointer;
@@ -277,7 +279,7 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-left: 1px solid rgba(255, 252, 249, 0.1);
-  z-index: var(--primitive-z-fixed, 1030);
+  z-index: 10000; /* Above header */
   transition: right var(--semantic-duration-300, 300ms)
     var(--semantic-easing-default, ease);
   overflow-y: auto;
@@ -388,7 +390,13 @@
 
   .search-toggle,
   .menu-toggle {
-    width: 36px;
-    height: 36px;
+    width: 44px; /* Larger tap target for 380px */
+    height: 44px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1.5px solid var(--semantic-brand-primary);
+  }
+
+  .header-actions {
+    gap: var(--primitive-spacing-2, 0.5rem);
   }
 }
