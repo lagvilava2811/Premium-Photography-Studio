@@ -233,7 +233,12 @@
             box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
         }
     </style>
-</head>
+
+    <link rel="alternate" hreflang="en" href="https://anuka-abazadze.wasmer.app/portfolio.html?lang=en" />
+    <link rel="alternate" hreflang="ka" href="https://anuka-abazadze.wasmer.app/portfolio.html?lang=ka" />
+    <link rel="alternate" hreflang="ru" href="https://anuka-abazadze.wasmer.app/portfolio.html?lang=ru" />
+    <link rel="alternate" hreflang="x-default" href="https://anuka-abazadze.wasmer.app/portfolio.html" />
+  </head>
 <body>
     <!-- ========== 3D CANVAS BACKGROUND ========== -->
     <div class="hero-background" style="position: fixed; z-index: -2; top: 0; left: 0; right: 0; bottom: 0;">
@@ -338,7 +343,7 @@
         <div class="footer-container">
             <div class="footer-brand">
                 <a href="index.html" class="footer-logo">ANUKA ABAZADZE</a>
-                <p>Premium Photography Studio<br>Based in Kutaisi, Georgia</p>
+                <p>Premium Photography Studio<br /> Based in Kutaisi, Georgia</p>
             </div>
             <div class="footer-links">
                 <div class="footer-col">
@@ -351,8 +356,8 @@
                 <div class="footer-col">
                     <h4>Connect</h4>
                     <a href="contact.html">Contact</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">Facebook</a>
+                    <a href="https://www.instagram.com/anukaabazadze/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.facebook.com/anukaabazadze" target="_blank" rel="noopener noreferrer">Facebook</a>
                 </div>
                 <div class="footer-col">
                     <h4>Studio</h4>
@@ -450,11 +455,11 @@
             for(let i = 0; i < 12; i++) {
                 const itemIndex = i % displayItems.length;
                 const item = displayItems[itemIndex];
-                const realIndex = galleryItems.indexOf(item);
+                const title = item.title || 'Anuka Abazadze photography portfolio image';
                 const ry = i * 30; // 360 / 12
                 html += `
-                <div class="dodecagon-face" style="--ry: ${ry}deg;" onclick="openLightbox(${realIndex})">
-                    <img src="${item.src}" alt="${item.title}" loading="lazy">
+                <div class="dodecagon-face" style="--ry: ${ry}deg;" onclick="openLightbox(${itemIndex})">
+                    <img src="${item.src}" alt="${title}" loading="lazy">
                 </div>`;
             }
             html += '</div></div>';
@@ -512,6 +517,8 @@
             const items = currentFilter === 'all' ? galleryItems : galleryItems.filter(i => i.category === currentFilter);
             const item = items[index];
             if (!item) return;
+            const title = item.title || 'Anuka Abazadze photography portfolio image';
+            const category = item.category || 'portfolio';
             
             const modal = document.createElement('div');
             modal.style.cssText = `
@@ -522,10 +529,10 @@
             `;
             modal.innerHTML = `
                 <div style="max-width: 90vw; max-height: 90vh;">
-                    <img src="${item.src}" style="max-width: 100%; max-height: 90vh; object-fit: contain;">
+                    <img src="${item.src}" alt="${title}" style="max-width: 100%; max-height: 90vh; object-fit: contain;">
                     <div style="text-align: center; padding: 1rem; color: #D4AF37;">
-                        <h3>${item.title}</h3>
-                        <p style="color: #9CA3AF; text-transform: capitalize;">${item.category}</p>
+                        <h3>${title}</h3>
+                        <p style="color: #9CA3AF; text-transform: capitalize;">${category}</p>
                     </div>
                 </div>
                 <button style="position: absolute; top: 20px; right: 20px; background: none; border: none; color: white; font-size: 30px; cursor: pointer;">✕</button>
